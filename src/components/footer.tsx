@@ -1,7 +1,10 @@
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 const Footer = () => {
+  const history = useHistory();
+
   return (
     <div className="border-t-[1px] bg-white z-10">
       <div className="h-32 p-5 container mx-auto">
@@ -11,7 +14,12 @@ const Footer = () => {
         </div>
         <div className="flex justify-center pt-4">
           <span className="r-text-s">{`${new Date().getFullYear()} - Yves Wetter -`}</span>
-          <span className="r-text-s hover:cursor-pointer">{"Impressum"}</span>
+          <span
+            className="r-text-s hover:cursor-pointer"
+            onClick={() => history.push("/impressum")}
+          >
+            {"Impressum"}
+          </span>
         </div>
       </div>
     </div>
