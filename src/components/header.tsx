@@ -3,7 +3,7 @@ import logo_klein from "../assets/logos/logo_klein.svg";
 
 const Header = () => {
   return (
-    <div className="shadow-lg">
+    <div className="shadow-lg bg-white z-10">
       <div className="container mx-auto h-[80px] p-5 flex justify-between">
         <div className="flex">
           <img

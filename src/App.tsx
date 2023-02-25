@@ -4,6 +4,10 @@ import "./App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import HomeContainer from "./components/home/home-container";
+import ProjectsContainer from "./components/projects/projects-container";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -16,7 +20,18 @@ function App() {
             <img src={logo} alt="logo" className="opacity-[0.10]" />
           </div>
         </div>
-        <div className="p-5 container mx-auto">content</div>
+        <div className="p-5 container mx-auto">
+          <BrowserRouter basename="/">
+            <Switch>
+              <Route exact path="/" component={() => <HomeContainer />} />
+              <Route
+                exact
+                path="/projects"
+                component={() => <ProjectsContainer />}
+              />
+            </Switch>
+          </BrowserRouter>
+        </div>
       </div>
       <Footer />
     </div>
