@@ -3,3 +3,55 @@ body {
   min-width: 100vw;
   min-height: 100vh;
 }
+
+.max-3-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.max-2-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.max-1-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.semibold {
+  font-family: Beatrice-Semibold, Arial, sans-serif;
+}
+
+.r-text-xl {
+  @apply text-sm-xl md:text-lg-xl;
+}
+
+.r-text-l {
+  @apply text-sm-l md:text-lg-l;
+}
+
+.r-text-m {
+  @apply text-sm-m md:text-lg-m;
+}
+
+.r-text-s {
+  @apply text-sm-s md:text-lg-s;
+}
+
+.r-text-xs {
+  @apply text-sm-xs md:text-lg-xs;
+}
+
+.r-text-xxs {
+  @apply text-sm-xxs md:text-lg-xxs;
+}

@@ -1,21 +1,24 @@
 import { useState } from "react";
 import logo from "./public/logos/logo_3d_background.svg";
 import "./App.css";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="container min-h-screen flex flex-col mx-auto">
-      <div className="bg-slate-600">i biims de header</div>
+    <div className="min-h-screen flex flex-col">
+      <Header />
       <div className="flex-grow">
-        <div className="fixed top-1/2 left-1/2] translate-x-[50%] translate-y-[-50%] w-[50%]">
-          <img src={logo} alt="logo" className="opacity-[0.15]" />
+        <div className="container xl:mx-auto">
+          <div className="fixed top-1/2 left-1/2] translate-x-[50%] translate-y-[-50%] w-[50%]">
+            <img src={logo} alt="logo" className="opacity-[0.10]" />
+          </div>
         </div>
-        <div className="h-[300vh]">i bims de content</div>
-        <header className="App-header"></header>
+        <div className="p-5 container mx-auto">content</div>
       </div>
-      <div className="bg-slate-600">i biims de footer</div>
+      <Footer />
     </div>
   );
 }
