@@ -1,5 +1,6 @@
 import fingers from "../../assets/fingers.png";
 import { Helmet } from "react-helmet";
+import WelcomeSection from "./welcome-section";
 
 const HomeContainer = () => {
   const title = "Home - Yves Wetter";
@@ -20,7 +21,9 @@ const HomeContainer = () => {
         <meta content={description} property="og:description" />
         <meta content="website" property="og:type" />
       </Helmet>
-      <section className="h-[30vh]">Welcome Section</section>
+      <section>
+        <WelcomeSection />
+      </section>
       <section className="h-[30vh]">Skills Section</section>
       <section className="h-[30vh]">Image Section</section>
       <section className="h-[30vh]">Projects Section</section>
