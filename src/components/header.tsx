@@ -11,10 +11,12 @@ const Header = () => {
             alt="logo"
             className="w-10 mr-5 hover:cursor-pointer"
           />
-          <h1 className="r-text-l">YVESWETTER.CH</h1>
+          <h1 className="r-text-l font-semibold">Yves Wetter</h1>
         </div>
         <div className="my-auto hover:cursor-pointer">
-          <p className="r-text-m">CONTACT</p>
+          <p className="r-text-l font-semibold transition-all ease-in duration-150 hover:scale-105">
+            Contact
+          </p>
         </div>
       </div>
     </div>

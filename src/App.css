@@ -1,5 +1,18 @@
+@font-face {
+  font-family: "Basier-Circle-Mono-Regular";
+  src: url("./assets/fonts/basiercirclemono-regular-webfont.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Basier-Circle-Mono--Semibold";
+  src: url("./assets/fonts/basiercirclemono-semibold-webfont.ttf");
+  font-display: swap;
+}
+
 #root,
 body {
+  font-family: Basier-Circle-Mono-Regular, Arial, sans-serif !important;
   min-width: 100vw;
   min-height: 100vh;
 }
