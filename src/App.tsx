@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "./public/logos/logo_3d_background.svg";
+import logo from "./assets/logos/logo_3d_background.svg";
 import "./App.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div className="flex-grow">
         <div className="container xl:mx-auto">
-          <div className="fixed top-1/2 left-1/2] translate-x-[50%] translate-y-[-50%] w-[50%]">
+          <div className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
             <img src={logo} alt="logo" className="opacity-[0.10]" />
           </div>
         </div>
