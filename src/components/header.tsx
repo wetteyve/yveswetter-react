@@ -9,7 +9,7 @@ const Header = () => {
           <img src={logo_klein} alt="logo" className="w-10 mr-5" />
           <h1 className="r-text-l">YVESWETTER.CH</h1>
         </div>
-        <div>
+        <div className="my-auto">
           <p className="r-text-m">CONTACT</p>
         </div>
       </div>
