@@ -1,43 +1,21 @@
 import { useState } from "react";
-import logo from "./logo.svg";
+import logo from "./public/logos/logo_3d_background.svg";
 import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="text-blue-500">Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="container min-h-screen flex flex-col mx-auto">
+      <div className="bg-slate-600">i biims de header</div>
+      <div className="flex-grow">
+        <div className="fixed top-1/2 left-1/2] translate-x-[50%] translate-y-[-50%] w-[50%]">
+          <img src={logo} alt="logo" className="opacity-[0.15]" />
+        </div>
+        <div className="h-[300vh]">i bims de content</div>
+        <header className="App-header"></header>
+      </div>
+      <div className="bg-slate-600">i biims de footer</div>
     </div>
   );
 }
