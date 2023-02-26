@@ -6,7 +6,7 @@ const WelcomeSection = () => {
   return (
     data && (
       <>
-        <FadeInAnimation direction={"down"}>
+        <FadeInAnimation direction={"left"}>
           <div className="max-w-3xl">
             <h1 className="r-text-xl font-semibold pb-6">
               {data.welcomeHeading}
@@ -15,7 +15,7 @@ const WelcomeSection = () => {
           </div>
         </FadeInAnimation>
 
-        <FadeInAnimation direction={"up"}>
+        <FadeInAnimation direction={"right"}>
           <div className="max-w-[300px] sm:max-w-[450px] md:max-w-[600px] mx-auto">
             <img src={yves} alt="image yves wetter" />
           </div>

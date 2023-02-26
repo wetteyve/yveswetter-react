@@ -20,7 +20,7 @@ const ImpressumContainer = () => {
         <meta content={description} property="og:description" />
         <meta content="website" property="og:type" />
       </Helmet>
-      <FadeInAnimation direction={"up"}>
+      <FadeInAnimation direction={"left"}>
         <h1 className="r-text-xl font-semibold pb-6">{data.title}</h1>
         <div className="grid grid-cols-2">
           <span>{"Name"}</span>
