@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import ContactForm from "./contact-form";
 
 const ContactContainer = () => {
   const title = "Contact - Yves Wetter";
@@ -19,7 +20,7 @@ const ContactContainer = () => {
         <meta content={description} property="og:description" />
         <meta content="website" property="og:type" />
       </Helmet>
-      ContactContainer
+      <ContactForm />
     </div>
   );
 };
