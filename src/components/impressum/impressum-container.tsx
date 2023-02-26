@@ -1,8 +1,16 @@
+import { useRef } from "react";
 import { Helmet } from "react-helmet";
+import {
+  fadeInObserver,
+  useIntersectionObserver,
+} from "../../utils/intersection-observer";
 import FadeInAnimation from "../fade-in/fadein-animation";
 import data from "./data.json";
 
 const ImpressumContainer = () => {
+  const impressumRef = useRef<HTMLDivElement>(null);
+  useIntersectionObserver(impressumRef, fadeInObserver);
+
   const title = "Impressum | Yves Wetter";
   const description = "Impressum yveswetter.ch";
 
@@ -20,7 +28,7 @@ const ImpressumContainer = () => {
         <meta content={description} property="og:description" />
         <meta content="website" property="og:type" />
       </Helmet>
-      <FadeInAnimation direction={"left"}>
+      <div ref={impressumRef} className="opacity-0">
         <h1 className="r-text-xl font-semibold pb-6">{data.title}</h1>
         <div className="grid grid-cols-2">
           <span>{"Name"}</span>
@@ -32,7 +40,7 @@ const ImpressumContainer = () => {
           <span>{`Copyright © ${new Date().getFullYear()} by Yves Wetter`}</span>
           <span>{data.disclaimer}</span>
         </div>
-      </FadeInAnimation>
+      </div>
     </div>
   );
 };

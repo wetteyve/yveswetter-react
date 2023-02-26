@@ -13,7 +13,6 @@
 #root,
 body {
   font-family: Basier-Circle-Mono-Regular, Arial, sans-serif !important;
-  min-width: 100vw;
   min-height: 100vh;
 }
 
@@ -67,4 +66,92 @@ body {
 
 .r-text-xxs {
   @apply text-sm-xxs md:text-lg-xxs;
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@screen lg {
+  @keyframes fadeInFromRight {
+    0% {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInFromLeft {
+    0% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+.fadeInFromRight {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeInFromRight 1s ease-out forwards;
+}
+
+.fadeInFromLeft {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: fadeInFromLeft 1s ease-out forwards;
+}
+
+@keyframes growIn {
+  0% {
+    transform: scale(0) rotate(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shrinkOut {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(-30deg);
+    opacity: 0;
+  }
+}
+
+.growIn {
+  animation: growIn 300ms ease-out forwards;
+}
+
+.shrinkOut {
+  animation: shrinkOut 300ms ease-out forwards;
 }
