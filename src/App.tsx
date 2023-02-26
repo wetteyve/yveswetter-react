@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "./assets/logos/logo_3d_background.svg";
 import "./App.css";
-import Header from "./components/header";
+import Header from "./components/navbar/header";
 import Footer from "./components/footer";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
