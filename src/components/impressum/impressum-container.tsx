@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const ImpressumContainer = () => {
-  const title = "Impressum - Yves Wetter";
+  const title = "Impressum | Yves Wetter";
   const description = "Impressum yveswetter.ch";
 
   return (

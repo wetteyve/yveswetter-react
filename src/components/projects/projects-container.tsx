@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 const ProjectsContainer = () => {
-  const title = "Porjects - Yves Wetter";
-  const description = "Project developed by Yves Wetter.";
+  const title = "Porjects | Yves Wetter";
+  const description = "Projects developed by Yves Wetter.";
 
   return (
     <div>

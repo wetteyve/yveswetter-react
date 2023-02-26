@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import WelcomeSection from "./welcome-section";
 
 const HomeContainer = () => {
-  const title = "Home - Yves Wetter";
+  const title = "Home | Yves Wetter";
   const description =
     "Portfolio for web-projects by Yves Wetter. Here you find some information about the most recent projects.";
 
