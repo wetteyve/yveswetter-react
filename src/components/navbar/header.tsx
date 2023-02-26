@@ -58,6 +58,9 @@ const Header = () => {
             </div>
           ))}
         </div>
+        <div className="block md:hidden my-auto">
+          <h1 className="r-text-m font-semibold">{"YVESWETTER.CH"}</h1>
+        </div>
         <div className="block md:hidden">
           <MobileNavbar items={navbarItemsMobile} />
         </div>
