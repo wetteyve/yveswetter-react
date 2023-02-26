@@ -4,7 +4,6 @@ import {
   fadeInObserver,
   useIntersectionObserver,
 } from "../../utils/intersection-observer";
-import FadeInAnimation from "../fade-in/fadein-animation";
 import data from "./data.json";
 
 const ImpressumContainer = () => {

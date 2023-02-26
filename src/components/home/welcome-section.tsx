@@ -1,4 +1,3 @@
-import FadeInAnimation from "../fade-in/fadein-animation";
 import data from "./data.json";
 import yves from "../../assets/yves.jpg";
 import {
