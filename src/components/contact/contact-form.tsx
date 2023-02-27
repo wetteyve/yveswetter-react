@@ -1,5 +1,9 @@
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import {
+  fadeInObserver,
+  useIntersectionObserver,
+} from "../../utils/intersection-observer";
 
 type FormStatus = "Send" | "Submitting...";
 interface IForm {
@@ -15,6 +19,8 @@ const ContactForm = () => {
     clientMessage: "",
   };
 
+  const formRef = useRef<HTMLDivElement>(null);
+  useIntersectionObserver(formRef, fadeInObserver);
   const [formStatus, setFormStatus] = useState<FormStatus>("Send");
   const [form, setForm] = useState<IForm>(emptyForm);
   const MAIL_CLIENT_URL =
@@ -23,7 +29,6 @@ const ContactForm = () => {
   const onSubmit = async (e: any) => {
     e.preventDefault();
     setFormStatus("Submitting...");
-    console.log(form);
     const response = await axios.post(MAIL_CLIENT_URL, form);
     if (response.status === 201) {
       alert("Message sent");
@@ -39,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div ref={formRef} data-origin="bottom" className="container mt-5">
       <form onSubmit={onSubmit}>
         <div className="mb-3 border-b-[1px] border-black">
           <input
