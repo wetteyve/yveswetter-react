@@ -1,5 +1,5 @@
 import data from "./data.json";
-import yves from "../../assets/yves.jpg";
+import yves from "../../assets/yves.webp";
 import {
   fadeInObserver,
   useIntersectionObserver,
@@ -23,9 +23,10 @@ const WelcomeSection = () => {
         </div>
         <div
           ref={imageRef}
+          data-origin="right"
           className="opacity-0 max-w-[300px] sm:max-w-[450px] md:max-w-[600px] mx-auto"
         >
-          <img src={yves} alt="image yves wetter" />
+          <img src={yves} alt="image yves wetter" className="rounded" />
         </div>
       </>
     )

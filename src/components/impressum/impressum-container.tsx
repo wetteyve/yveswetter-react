@@ -27,7 +27,7 @@ const ImpressumContainer = () => {
         <meta content={description} property="og:description" />
         <meta content="website" property="og:type" />
       </Helmet>
-      <div ref={impressumRef} className="opacity-0">
+      <div ref={impressumRef} data-origin="bottom" className="opacity-0">
         <h1 className="r-text-xl font-semibold pb-6">{data.title}</h1>
         <div className="grid grid-cols-2">
           <span>{"Name"}</span>

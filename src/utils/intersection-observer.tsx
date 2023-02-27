@@ -14,9 +14,23 @@ export const fadeInObserver = new IntersectionObserver(
         const origin = entry.target.getAttribute("data-origin") || "left";
         if (!entry.target.style.animationDelay)
           entry.target.style.animationDelay = `${800 * index}ms`;
-        entry.target.classList.add(
-          origin === "left" ? "fadeInFromLeft" : "fadeInFromRight"
-        );
+        switch (origin) {
+          case "left":
+            entry.target.classList.add("fadeInFromLeft");
+            break;
+          case "right":
+            entry.target.classList.add("fadeInFromRight");
+            break;
+          case "top":
+            entry.target.classList.add("fadeInFromTop");
+            break;
+          case "bottom":
+            entry.target.classList.add("fadeInFromBottom");
+            break;
+          default:
+            entry.target.classList.add("fadeInFromLeft");
+            break;
+        }
         fadeInObserver.unobserve(entry.target);
       });
   },
