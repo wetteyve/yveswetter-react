@@ -22,10 +22,10 @@ const Footer = () => {
         <div className="flex justify-center pt-4">
           <span className="r-text-s">{`${new Date().getFullYear()} - Yves Wetter -`}</span>
           <span
-            className="r-text-s hover:cursor-pointer"
+            className="r-text-s hover:cursor-pointer whitespace-pre"
             onClick={() => history.push("/impressum")}
           >
-            {"Impressum"}
+            {" Impressum"}
           </span>
         </div>
       </div>
