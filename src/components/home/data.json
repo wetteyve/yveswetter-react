@@ -2,9 +2,51 @@
   "welcomeHeading": "Welcome to my portfolio",
   "welcomeText": "Hi there! My name is Yves and I'm working as a fullstack web developer since 2020. I have a Bachelor of Science ZFH in Computer Science from ZHAW School of Engineering. When it comes to frontend development, I'm a big fan of javascript frameworks like Next.js React and Vue. When it comes to backend, I prefer working with NodeJS. NestJS and Express are my favorite NodeJS frameworks for backend services at the moment. If possible, I always work with Typescript in my projects.",
   "skillsHeading": "Skills",
-  "skillsIntroduction": "Since I have started my computer science journey in 2018 I have gotten into several technologies.",
-  "skillsStacksTitle": "Technology stacks",
-  "skillsFrontednTitle": "Frontend",
-  "skillsBackendTitle": "Backend",
-  "skillsToolsTitle": "Tools"
+  "skillsIntroduction": "Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below with corresponding skill level.",
+  "skills": [
+    {
+      "title": "Technology stacks",
+      "items": [
+        { "title": "NodeJS", "level": "meter-90" },
+        { "title": "Next.js", "level": "meter-80" },
+        { "title": "PostgreSQL", "level": "meter-70" },
+        { "title": "CouchDB", "level": "meter-80" }
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        { "title": "Typescript", "level": "meter-90" },
+        { "title": "Javascript", "level": "meter-90" },
+        { "title": "React", "level": "meter-90" },
+        { "title": "Vue", "level": "meter-70" },
+        { "title": "CSS", "level": "meter-80" },
+        { "title": "HTML5", "level": "meter-80" }
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        { "title": "NodeJS", "level": "meter-90" },
+        { "title": "Express", "level": "meter-90" },
+        { "title": "NestJS", "level": "meter-80" },
+        { "title": "CouchDB", "level": "meter-80" },
+        { "title": "Java", "level": "meter-60" },
+        { "title": "Spring", "level": "meter-50" }
+      ]
+    },
+    {
+      "title": "Tools",
+      "items": [
+        { "title": "Git", "level": "meter-100" },
+        { "title": "GithubActions", "level": "meter-60" },
+        { "title": "Bitbucket Pipelines", "level": "meter-70" },
+        { "title": "Kubernetes", "level": "meter-70" },
+        { "title": "Docker", "level": "meter-70" },
+        { "title": "Tailwind", "level": "meter-80" },
+        { "title": "Jira", "level": "meter-80" },
+        { "title": "Confluence", "level": "meter-80" }
+      ]
+    }
+  ]
 }
