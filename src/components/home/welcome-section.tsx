@@ -15,7 +15,7 @@ const WelcomeSection = () => {
   return (
     data && (
       <>
-        <div ref={textRef} className="max-w-3xl opacity-0">
+        <div ref={textRef} className=" opacity-0">
           <h1 className="r-text-xl font-semibold pb-6">
             {data.welcomeHeading}
           </h1>
