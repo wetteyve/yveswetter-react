@@ -11,8 +11,6 @@ import ContactContainer from "./components/contact/contact-container";
 import ImpressumContainer from "./components/impressum/impressum-container";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="min-h-screen flex flex-col">
       <BrowserRouter basename="/">

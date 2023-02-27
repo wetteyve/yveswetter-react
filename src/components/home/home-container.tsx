@@ -1,8 +1,16 @@
 import fingers from "../../assets/fingers.png";
 import { Helmet } from "react-helmet";
 import WelcomeSection from "./welcome-section";
+import { useRef } from "react";
+import {
+  fadeInObserver,
+  useIntersectionObserver,
+} from "../../utils/intersection-observer";
 
 const HomeContainer = () => {
+  const fingersRef = useRef(null);
+  useIntersectionObserver(fingersRef, fadeInObserver);
+
   const title = "Home | Yves Wetter";
   const description =
     "Portfolio for web-projects by Yves Wetter. Here you find some information about the most recent projects.";
@@ -25,10 +33,15 @@ const HomeContainer = () => {
         <WelcomeSection />
       </section>
       <section className="h-[30vh]">Skills Section</section>
-      <section className="h-[30vh]">Image Section</section>
       <section className="h-[30vh]">Projects Section</section>
       <section>
-        <img className="mx-auto" src={fingers} alt="thumbs-up" />
+        <img
+          ref={fingersRef}
+          data-origin="bottom"
+          className="mx-auto opacity-0"
+          src={fingers}
+          alt="thumbs-up"
+        />
       </section>
     </div>
   );

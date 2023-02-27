@@ -9,7 +9,7 @@ const Footer = () => {
   const github_url = "https://github.com/wetteyve";
 
   return (
-    <div className="border-t-[1px] bg-white">
+    <div className="border-t-[1px] bg-white z-10">
       <div className="h-32 p-5 container mx-auto">
         <div className="flex justify-center">
           <a href={github_url} target="_blank" rel="noopener noreferrer">

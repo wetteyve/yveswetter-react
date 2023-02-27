@@ -16,7 +16,7 @@ const MobileNavbar = (props: MobileNavbarProps) => {
   }, [isOpen]);
 
   return (
-    <>
+    <div className="z-20">
       <div>
         <button
           className={`rounded-full bg-accent p-3 text-white transition-all active:scale-95 bg-black ${
@@ -44,7 +44,7 @@ const MobileNavbar = (props: MobileNavbarProps) => {
           />
         ))}
       </nav>
-    </>
+    </div>
   );
 };
 

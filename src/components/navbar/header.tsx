@@ -35,7 +35,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="shadow-lg bg-white z-10">
+    <div className="shadow-lg bg-white z-20">
       <div className="container mx-auto h-[80px] p-5 flex justify-between">
         <div className="flex">
           <img
