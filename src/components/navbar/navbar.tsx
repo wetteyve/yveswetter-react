@@ -8,7 +8,7 @@ export type NavbarItemType = {
   text: string;
 };
 
-const Header = () => {
+const Navbar = () => {
   const history = useHistory();
 
   const navbarItemsDesktop: NavbarItemType[] = [
@@ -69,4 +69,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

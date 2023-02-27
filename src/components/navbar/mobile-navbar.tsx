@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { TbMenu2, TbX } from "react-icons/tb";
-import { NavbarItemType } from "./header";
+import { NavbarItemType } from "./navbar";
 import MobileNavbarItem from "./mobile-navbar-item";
 
 type MobileNavbarProps = {
