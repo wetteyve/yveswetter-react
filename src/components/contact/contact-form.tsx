@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+type FormStatus = "Send" | "Submitting...";
+
 const ContactForm = () => {
-  const [formStatus, setFormStatus] = useState("Send");
+  const [formStatus, setFormStatus] = useState<FormStatus>("Send");
   const onSubmit = (e: any) => {
     e.preventDefault();
     setFormStatus("Submitting...");
@@ -15,27 +17,44 @@ const ContactForm = () => {
   };
   return (
     <div className="container mt-5">
-      <h2 className="mb-3">React Contact Form Component Example</h2>
       <form onSubmit={onSubmit}>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="name">
-            Name
-          </label>
-          <input className="form-control" type="text" id="name" required />
+        <div className="mb-3 border-b-[1px] border-black">
+          <input
+            placeholder="Name"
+            className="form-control w-full outline-none bg-stone-100"
+            type="text"
+            id="name"
+            required
+          />
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="email">
-            Email
-          </label>
-          <input className="form-control" type="email" id="email" required />
+        <div className="mb-3 border-b-[1px] border-black">
+          <input
+            placeholder="Email"
+            className="form-control w-full outline-none bg-stone-100"
+            type="email"
+            id="email"
+            required
+          />
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="message">
-            Message
-          </label>
-          <textarea className="form-control" id="message" required />
+        <div className="mb-3  border-b-[1px] border-black">
+          <textarea
+            placeholder="Message"
+            className="form-control w-full h-32  outline-none bg-stone-100"
+            id="message"
+            required
+          />
         </div>
-        <button className="btn btn-danger" type="submit">
+        <button
+          disabled={formStatus === "Submitting..."}
+          className={`btn btn-danger my-6 py-2 px-4 shadow-md text-white rounded-md
+                      transition-all ease-in-out duration-150
+                      ${
+                        formStatus === "Send"
+                          ? "bg-[#4CAF50] hover:scale-105 "
+                          : "bg-[#FF5252]"
+                      }`}
+          type="submit"
+        >
           {formStatus}
         </button>
       </form>
