@@ -1,20 +1,43 @@
+import axios from "axios";
 import { useState } from "react";
 
 type FormStatus = "Send" | "Submitting...";
+interface IForm {
+  clientName: string;
+  clientMail: string;
+  clientMessage: string;
+}
 
 const ContactForm = () => {
+  const emptyForm: IForm = {
+    clientName: "",
+    clientMail: "",
+    clientMessage: "",
+  };
+
   const [formStatus, setFormStatus] = useState<FormStatus>("Send");
-  const onSubmit = (e: any) => {
+  const [form, setForm] = useState<IForm>(emptyForm);
+  const MAIL_CLIENT_URL =
+    "https:///mailer.yveswetter.ch/mailer/contact-form?mailClient=yves";
+
+  const onSubmit = async (e: any) => {
     e.preventDefault();
     setFormStatus("Submitting...");
-    const { name, email, message } = e.target.elements;
-    let conFom = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    console.log(conFom);
+    console.log(form);
+    const response = await axios.post(MAIL_CLIENT_URL, form);
+    if (response.status === 201) {
+      alert("Message sent");
+      setForm(emptyForm);
+    } else {
+      alert("Oops something went wrong. Please try again.");
+    }
+    setFormStatus("Send");
   };
+
+  const onFormChange = (e: any) => {
+    setForm({ ...form, [e.target.id]: e.target.value } as IForm);
+  };
+
   return (
     <div className="container mt-5">
       <form onSubmit={onSubmit}>
@@ -23,8 +46,10 @@ const ContactForm = () => {
             placeholder="Name"
             className="form-control w-full outline-none bg-stone-100"
             type="text"
-            id="name"
+            id="clientName"
             required
+            value={form.clientName}
+            onChange={onFormChange}
           />
         </div>
         <div className="mb-3 border-b-[1px] border-black">
@@ -32,16 +57,20 @@ const ContactForm = () => {
             placeholder="Email"
             className="form-control w-full outline-none bg-stone-100"
             type="email"
-            id="email"
+            id="clientMail"
             required
+            value={form.clientMail}
+            onChange={onFormChange}
           />
         </div>
         <div className="mb-3  border-b-[1px] border-black">
           <textarea
             placeholder="Message"
             className="form-control w-full h-32  outline-none bg-stone-100"
-            id="message"
+            id="clientMessage"
             required
+            value={form.clientMessage}
+            onChange={onFormChange}
           />
         </div>
         <button
