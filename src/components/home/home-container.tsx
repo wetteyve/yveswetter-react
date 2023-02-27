@@ -6,6 +6,7 @@ import {
   fadeInObserver,
   useIntersectionObserver,
 } from "../../utils/intersection-observer";
+import SkillsSection from "./skills-section";
 
 const HomeContainer = () => {
   const fingersRef = useRef(null);
@@ -32,7 +33,9 @@ const HomeContainer = () => {
       <section>
         <WelcomeSection />
       </section>
-      <section className="h-[30vh]">Skills Section</section>
+      <section>
+        <SkillsSection />
+      </section>
       <section className="h-[30vh]">Projects Section</section>
       <section>
         <img

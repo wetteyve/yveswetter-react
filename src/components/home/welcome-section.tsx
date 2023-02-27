@@ -24,7 +24,7 @@ const WelcomeSection = () => {
         <div
           ref={imageRef}
           data-origin="right"
-          className="opacity-0 max-w-[300px] sm:max-w-[450px] md:max-w-[600px] mx-auto"
+          className="opacity-0 max-w-[300px] sm:max-w-[450px] md:max-w-[600px] mx-auto pb-12"
         >
           <img src={yves} alt="image yves wetter" className="rounded" />
         </div>
