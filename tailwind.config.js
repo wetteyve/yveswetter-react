@@ -25,6 +25,18 @@ module.exports = {
         "background-black": "#231F20;",
         "mt-black": "#000000D9",
       },
+      animation: {
+        fadeIn: "fadeIn 250ms ease-in forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+      variants: {
+        animation: ["motion-safe"],
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

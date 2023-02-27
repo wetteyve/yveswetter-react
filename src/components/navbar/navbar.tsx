@@ -1,6 +1,7 @@
 import logo_klein from "../../assets/logos/logo_klein.svg";
 import { useHistory } from "react-router-dom";
 import MobileNavbar from "./mobile-navbar";
+import { useEffect, useState } from "react";
 
 export type NavbarItemType = {
   href: string;
@@ -10,6 +11,26 @@ export type NavbarItemType = {
 
 const Navbar = () => {
   const history = useHistory();
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > prevScrollPos) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
 
   const navbarItemsDesktop: NavbarItemType[] = [
     {
@@ -35,7 +56,11 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="shadow-lg bg-white z-20">
+    <div
+      className={`shadow-lg bg-white z-20 sticky ${
+        visible ? "top-0 motion-safe:animate-fadeIn" : ""
+      }`}
+    >
       <div className="container mx-auto h-[80px] p-5 flex justify-between">
         <div className="flex">
           <img
