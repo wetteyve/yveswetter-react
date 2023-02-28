@@ -17,7 +17,9 @@ export const AccordionPanel = (props: AccordionItemProps) => {
 
   const handleClick = () => {
     props.onItemSelected(props.index);
-    panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => {
+      panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 90);
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {

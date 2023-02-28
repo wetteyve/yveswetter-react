@@ -29,7 +29,7 @@ const AnimateHeight = (props: AnimateHeightProps) => {
 
   return (
     <div
-      className='overflow-hidden transition-all duration-300'
+      className='overflow-hidden transition-all duration-75'
       style={{
         height: height,
       }}
