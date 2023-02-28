@@ -1,5 +1,11 @@
-.rotate-vertical:hover {
+.rotate-logo-forward {
   transition: all;
-  transition-duration: 300ms;
+  transition-duration: 1000ms;
   transform: rotate3d(1, 1, 1, 360deg);
+}
+
+.rotate-logo-backward {
+  transition: all;
+  transition-duration: 1000ms;
+  transform: rotate3d(0, 0, 0, 360deg);
 }
