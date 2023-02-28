@@ -3,7 +3,7 @@
 }
 
 .rotate-logo-backward {
-  animation: rotate-logo-backward 1000ms linear;
+  animation: rotate-logo-backward 2000ms linear;
 }
 
 @keyframes rotate-logo-forward {
@@ -13,8 +13,8 @@
   }
 
   50% {
-    -webkit-transform: rotate3d(0.5, 0.5, 0.5, 180deg);
-    transform: rotate3d(0.5, 0.5, 0.5, 180deg);
+    -webkit-transform: rotate3d(1, 1, 1, 180deg);
+    transform: rotate3d(1, 1, 1, 180deg);
   }
 
   100% {
@@ -30,8 +30,8 @@
   }
 
   50% {
-    -webkit-transform: rotate3d(0.5, 0.5, 0.5, 180deg);
-    transform: rotate3d(0.5, 0.5, 0.5, 180deg);
+    -webkit-transform: rotate3d(0, 0, 0, 180deg);
+    transform: rotate3d(0, 0, 0, 180deg);
   }
 
   100% {
