@@ -13,13 +13,8 @@ type AccordionItemProps = {
 };
 
 export const AccordionPanel = (props: AccordionItemProps) => {
-  const panelRef = useRef<HTMLDivElement>(null);
-
   const handleClick = () => {
     props.onItemSelected(props.index);
-    setTimeout(() => {
-      panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 90);
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -31,7 +26,6 @@ export const AccordionPanel = (props: AccordionItemProps) => {
   return (
     <>
       <div
-        ref={panelRef}
         tabIndex={0}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
