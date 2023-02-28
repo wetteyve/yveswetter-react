@@ -1,10 +1,8 @@
-import './skills-animation.css';
-
 import { useRef } from 'react';
 
 import { fadeInObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 import { Accordion, AccordionItem } from '../../accordion/accordion';
-import data from '../data.json';
+import { data } from '../data';
 import SkillItem from './skill-item';
 
 const SkillsSection = () => {
@@ -12,13 +10,13 @@ const SkillsSection = () => {
   useIntersectionObserver(skillsSection, fadeInObserver);
 
   const items =
-    data.skills.map((s) => {
+    data.skills.map((s: any) => {
       return {
         title: s.title,
         content: (
-          <div className='flex flex-wrap bg-white'>
-            {s.items.map((e, i) => (
-              <SkillItem key={`${i}-${s.title}`} skillTitle={e.title} skillLevel={e.level as any} />
+          <div className='flex flex-wrap justify-evenly md:justify-start'>
+            {s.items.map((e: any, i: number) => (
+              <SkillItem key={`${i}-${s.title}`} skillTitle={e.title} skillLogo={e.logo} />
             ))}
           </div>
         ),
