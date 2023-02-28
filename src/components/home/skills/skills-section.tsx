@@ -26,7 +26,7 @@ const SkillsSection = () => {
   return (
     <div ref={skillsSection} data-origin='bottom' className='pb-12 opacity-0'>
       <h1 className='r-text-xl font-semibold pb-6'>{data.skillsHeading}</h1>
-      <p className='r-text-m pb-12'>{data.skillsIntroduction}</p>
+      <p className='r-text-m pb-6'>{data.skillsIntroduction}</p>
       <div className='pb-6'>
         <Accordion items={items} />
       </div>
