@@ -1,4 +1,4 @@
-import { KeyboardEvent } from 'react';
+import { KeyboardEvent, useRef } from 'react';
 import { TbMinus, TbPlus } from 'react-icons/tb';
 
 import { KEYS } from '../../utils/keys.utils';
@@ -13,8 +13,11 @@ type AccordionItemProps = {
 };
 
 export const AccordionPanel = (props: AccordionItemProps) => {
+  const panelRef = useRef<HTMLDivElement>(null);
+
   const handleClick = () => {
     props.onItemSelected(props.index);
+    panelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
@@ -26,6 +29,7 @@ export const AccordionPanel = (props: AccordionItemProps) => {
   return (
     <>
       <div
+        ref={panelRef}
         tabIndex={0}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
