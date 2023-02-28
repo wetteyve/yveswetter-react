@@ -1,0 +1,5 @@
+.rotate-vertical:hover {
+  transition: all;
+  transition-duration: 300ms;
+  transform: rotate3d(1, 1, 1, 360deg);
+}

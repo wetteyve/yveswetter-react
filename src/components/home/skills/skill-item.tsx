@@ -1,3 +1,5 @@
+import './animate-3d.css';
+
 type SkillItemProps = {
   skillTitle: string;
   skillLogo?: React.ReactNode;
@@ -11,7 +13,7 @@ const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
       <div>
         <h4 className='pb-2'>{skillTitle}</h4>
       </div>
-      <div className='h-max'>{skillLogo}</div>
+      <div className='h-max rotate-vertical'>{skillLogo}</div>
     </div>
   );
 };
