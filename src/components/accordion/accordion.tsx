@@ -25,7 +25,6 @@ export const Accordion = (props: AccordionProps) => {
     const bodyRect = document.body.getBoundingClientRect();
     const elemRect = accordionRef?.current?.getBoundingClientRect();
     const targetY = (elemRect?.top || 0) - bodyRect.top - 200 + panelIndex * 75;
-    console.log(targetY);
     window.scroll(0, targetY);
   };
 
