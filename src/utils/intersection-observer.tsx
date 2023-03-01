@@ -42,14 +42,14 @@ const iOS = () => {
   );
 };
 
-export const roationObserver = new IntersectionObserver(
+export const rotationObserver = new IntersectionObserver(
   (entries) => {
     entries
       .filter((e) => e.isIntersecting)
       .forEach((entry) => {
         if (!(entry.target instanceof HTMLElement) && !(entry.target instanceof SVGElement)) return;
         entry.target.classList.add(iOS() ? 'rotate-logo-forward-ios' : 'rotate-logo-forward');
-        roationObserver.unobserve(entry.target);
+        rotationObserver.unobserve(entry.target);
       });
   },
   {

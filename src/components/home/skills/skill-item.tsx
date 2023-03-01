@@ -2,7 +2,7 @@ import './animate-3d.css';
 
 import { useRef } from 'react';
 
-import { roationObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
+import { rotationObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 
 type SkillItemProps = {
   skillTitle: string;
@@ -11,7 +11,7 @@ type SkillItemProps = {
 
 const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
   const logoRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(logoRef, roationObserver);
+  useIntersectionObserver(logoRef, rotationObserver);
 
   const rotate = () => {
     const element = document.getElementById(skillTitle);
