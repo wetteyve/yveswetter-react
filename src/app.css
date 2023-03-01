@@ -1,15 +1,15 @@
-@import url("./theme/text.css");
-@import url("./theme/animations.css");
+@import url('./theme/text.css');
+@import url('./theme/animations.css');
 
 @font-face {
-  font-family: "Basier-Circle-Mono-Regular";
-  src: url("./assets/fonts/basiercirclemono-regular-webfont.ttf");
+  font-family: 'Basier-Circle-Mono-Regular';
+  src: url('./assets/fonts/basiercirclemono-regular-webfont.ttf');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Basier-Circle-Mono--Semibold";
-  src: url("./assets/fonts/basiercirclemono-semibold-webfont.ttf");
+  font-family: 'Basier-Circle-Mono--Semibold';
+  src: url('./assets/fonts/basiercirclemono-semibold-webfont.ttf');
   font-display: swap;
 }
 
@@ -17,4 +17,10 @@
 body {
   font-family: Basier-Circle-Mono-Regular, Arial, sans-serif !important;
   min-height: 100vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
