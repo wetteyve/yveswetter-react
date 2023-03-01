@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import { IS_IOS } from './detect-ios';
+
 export const fadeInObserver = new IntersectionObserver(
   (entries) => {
     entries
@@ -34,21 +36,13 @@ export const fadeInObserver = new IntersectionObserver(
   }
 );
 
-const iOS = () => {
-  return (
-    ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
-    // iPad on iOS 13 detection
-    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
-  );
-};
-
 export const rotationObserver = new IntersectionObserver(
   (entries) => {
     entries
       .filter((e) => e.isIntersecting)
       .forEach((entry) => {
         if (!(entry.target instanceof HTMLElement) && !(entry.target instanceof SVGElement)) return;
-        entry.target.classList.add(iOS() ? 'rotate-logo-forward-ios' : 'rotate-logo-forward');
+        entry.target.classList.add(IS_IOS ? 'rotate-logo-forward-ios' : 'rotate-logo-forward');
         rotationObserver.unobserve(entry.target);
       });
   },

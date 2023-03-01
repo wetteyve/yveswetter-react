@@ -1,7 +1,8 @@
 import './animate-3d.css';
 
-import { useRef } from 'react';
+import { BaseSyntheticEvent, useRef } from 'react';
 
+import { IS_IOS } from '../../../utils/detect-ios';
 import { rotationObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 
 type SkillItemProps = {
@@ -13,14 +14,15 @@ const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
   const logoRef = useRef<HTMLDivElement>(null);
   useIntersectionObserver(logoRef, rotationObserver);
 
-  const rotate = () => {
+  const rotate = (e: BaseSyntheticEvent) => {
+    e.preventDefault();
     const element = document.getElementById(skillTitle);
-    if (element?.classList.contains('rotate-logo-forward')) {
-      element?.classList.remove('rotate-logo-forward');
-      element?.classList.add('rotate-logo-backward');
+    if (element?.classList.contains(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios')) {
+      element?.classList.remove(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
+      element?.classList.add(!IS_IOS ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
     } else {
-      element?.classList.remove('rotate-logo-backward');
-      element?.classList.add('rotate-logo-forward');
+      element?.classList.remove(!IS_IOS ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
+      element?.classList.add(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
     }
   };
 
@@ -29,7 +31,7 @@ const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
       <div>
         <h4 className='pb-2'>{skillTitle}</h4>
       </div>
-      <div ref={logoRef} id={skillTitle} className='h-max' onClick={rotate}>
+      <div ref={logoRef} id={skillTitle} className='h-max' onClick={(e) => rotate(e)}>
         {skillLogo}
       </div>
     </div>
