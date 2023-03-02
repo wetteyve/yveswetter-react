@@ -31,12 +31,32 @@ import {
 const logoClassName = 'w-full h-[100px]';
 
 export const data = {
-  welcomeHeading: 'Welcome to my portfolio',
-  welcomeText:
-    "Hi there! My name is Yves and I'm working as a fullstack web developer since 2020. I have a Bachelor of Science ZFH in Computer Science from ZHAW School of Engineering. When it comes to frontend development, I'm a big fan of javascript frameworks like Next.js React and Vue. When it comes to backend, I prefer working with NodeJS. NestJS and Express are my favorite NodeJS frameworks for backend services at the moment. If possible, I always work with Typescript in my projects.",
-  skillsHeading: 'Skills',
-  skillsIntroduction:
-    'Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below.',
+  projects: [
+    {
+      title: 'Makethings',
+      description:
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      devTeamSize: 5,
+    },
+    {
+      title: 'SEE Learning',
+      description:
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      devTeamSize: 2,
+    },
+    {
+      title: 'UHT Herisau',
+      description:
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      devTeamSize: 1,
+    },
+    {
+      title: 'claudiohetzel.ch',
+      description:
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      devTeamSize: 1,
+    },
+  ],
   skills: [
     {
       title: 'Frontend',
@@ -86,9 +106,4 @@ export const data = {
       ],
     },
   ],
-  projectsHeading: 'Projects',
-  projectsIntroduction: `Check out some of the exciting web projects I've worked on. In the past I was able to contribute to several fullstack projects or implement them completely on my own.`,
-  contactHeading: 'Contact',
-  contactIntroduction:
-    'If you have any questions about one of my projects, me or anything else, you can reach me here via the contact form. I will try to answer your questions as soon as possible. Thanks for stopping by.',
 };

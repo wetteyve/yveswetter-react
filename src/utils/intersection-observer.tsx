@@ -52,6 +52,21 @@ export const rotationObserver = new IntersectionObserver(
   }
 );
 
+export const modalObserver = new IntersectionObserver(
+  (entries) => {
+    entries
+      .filter((e) => e.isIntersecting)
+      .forEach((entry) => {
+        if (!(entry.target instanceof HTMLElement) && !(entry.target instanceof SVGElement)) return;
+        const origin = 'right';
+        entry.target.classList.add('fadeInFromRight');
+      });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
 export const useIntersectionObserver = (elementRef: React.MutableRefObject<Element | undefined | null>, observer: IntersectionObserver) => {
   useEffect(() => {
     const currentRef = elementRef.current;

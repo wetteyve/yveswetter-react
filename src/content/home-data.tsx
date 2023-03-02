@@ -87,7 +87,7 @@ export const data = {
     },
   ],
   projectsHeading: 'Projects',
-  projectsIntroduction: `Check out some of the exciting web projects I've worked on. In the past I was able to contribute to several fullstack projects or implement them completely on my own.`,
+  projectsIntroduction: `Check out some of the exciting web projects I've worked on. I was able to contribute to several fullstack projects or implemented them completely on my own.`,
   contactHeading: 'Contact',
   contactIntroduction:
     'If you have any questions about one of my projects, me or anything else, you can reach me here via the contact form. I will try to answer your questions as soon as possible. Thanks for stopping by.',
