@@ -12,7 +12,7 @@ import ProjectsContainer from './components/projects/projects-container';
 
 function App() {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='min-h-screen flex flex-col' id='app'>
       <BrowserRouter basename='/'>
         <Navbar />
         <div className='flex-grow'>

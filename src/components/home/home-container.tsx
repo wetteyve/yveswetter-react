@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import fingers from '../../assets/fingers.png';
@@ -12,7 +12,17 @@ const HomeContainer = () => {
   const skillsRef = useRef<HTMLElement>(null);
   const fingersRef = useRef<HTMLImageElement>(null);
   useIntersectionObserver(fingersRef, fadeInObserver);
+
+  const [bodyHeight, setBodyHeight] = useState<number>();
   const test = [0, 60, 80, 100];
+
+  const resizeScrollbarObserver = new ResizeObserver((entries: ResizeObserverEntry[]) => {
+    for (let entry of entries) {
+      const bodyRect = entry.target.getBoundingClientRect();
+      setBodyHeight(bodyRect.height);
+    }
+  });
+  resizeScrollbarObserver.observe(document.body);
 
   const title = 'Home | Yves Wetter';
   const description = 'Portfolio for web-projects by Yves Wetter. Here you find some information about the most recent projects.';
@@ -31,13 +41,13 @@ const HomeContainer = () => {
       <section ref={welcomeRef}>
         <WelcomeSection />
       </section>
-      <section ref={skillsRef}>
+      <section className='scrollbar-dot' ref={skillsRef}>
         <SkillsSection />
       </section>
-      <section>
+      <section className='scrollbar-dot'>
         <img ref={fingersRef} data-origin='bottom' className='mx-auto opacity-0' src={fingers} alt='thumbs-up' />
       </section>
-      <ScrollBar dots={test} />
+      {bodyHeight && <ScrollBar dots={test} height={bodyHeight} />}
     </div>
   );
 };

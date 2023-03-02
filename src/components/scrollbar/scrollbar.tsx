@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ScrollBar = (props: { dots?: number[] }) => {
-  const sliderRef = useRef(null);
+const ScrollBar = (props: { dots?: number[]; height: number }) => {
+  const sliderRef = useRef<HTMLSpanElement>(null);
   const trackMouse = (event: MouseEvent) => {
     event.preventDefault();
     const scrollbarbox = document.getElementById('scroll-bar')?.getBoundingClientRect();
@@ -31,8 +31,8 @@ const ScrollBar = (props: { dots?: number[] }) => {
       if (elInner && el && props.dots) {
         const nearestDot = Math.min(...props.dots.map((el) => Math.abs(el - sliderPos)));
         if (nearestDot < 10) {
-          el.style.width = `${(20 - nearestDot) * 2}px`;
-          el.style.height = `${(20 - nearestDot) * 2}px`;
+          el.style.width = `${(20 - nearestDot) * 1.5}px`;
+          el.style.height = `${(20 - nearestDot) * 1.5}px`;
           elInner.style.width = `${(10 - nearestDot) * 9}%`;
           elInner.style.height = `${(10 - nearestDot) * 9}%`;
         }
@@ -49,7 +49,6 @@ const ScrollBar = (props: { dots?: number[] }) => {
 
     setTimeout(() => {
       scrollHandler();
-      props.dots && handleScroll(Math.min(...props.dots) * 100);
     }, 100);
     window.addEventListener('scroll', scrollHandler);
 
@@ -61,7 +60,7 @@ const ScrollBar = (props: { dots?: number[] }) => {
 
   return (
     <div className='relative hidden md:block'>
-      <span className='fixed top-[10vh] right-0 w-12 h-[75vh] bg-transparent'>
+      <span className='fixed top-[10vh] 2xl:right-4 right-0 w-12 h-[75vh] bg-transparent'>
         <span id='scroll-bar' className='relative h-full w-1 block bg-gradient-to-b opacity-60 from-stone-300 to-stone-500 mx-auto'></span>
         <span
           id='scroll-dot'
@@ -89,7 +88,7 @@ const ScrollBar = (props: { dots?: number[] }) => {
               style={{
                 top: `${el}%`,
               }}
-              className={`absolute cursor-pointer w-6 h-6 bg-stone-600 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2`}
+              className={`absolute cursor-pointer w-4 h-4 bg-stone-600 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2`}
             ></span>
           ))}
       </span>
