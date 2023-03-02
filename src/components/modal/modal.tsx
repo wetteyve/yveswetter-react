@@ -1,6 +1,6 @@
 import './modal.css';
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { TbX } from 'react-icons/tb';
 
 import { modalObserver, useIntersectionObserver } from '../../utils/intersection-observer';
@@ -18,7 +18,7 @@ const Modal = ({ handleClose, show, children }: ModalProps) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
   return (
-    <div className={`${showHideClassName}`}>
+    <div className={`${showHideClassName}`} id='main-frame'>
       <div className='flex justify-center'>
         <section
           ref={modalRef}

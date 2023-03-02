@@ -35,25 +35,25 @@ export const data = {
     {
       title: 'Makethings',
       description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
       devTeamSize: 5,
     },
     {
       title: 'SEE Learning',
       description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
       devTeamSize: 2,
     },
     {
       title: 'UHT Herisau',
       description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
       devTeamSize: 1,
     },
     {
       title: 'claudiohetzel.ch',
       description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv is. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
       devTeamSize: 1,
     },
   ],
