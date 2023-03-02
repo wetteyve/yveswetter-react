@@ -12,10 +12,10 @@ import ProjectsContainer from './components/projects/projects-container';
 
 function App() {
   return (
-    <div className='min-h-screen flex flex-col' id='app'>
+    <div className='min-h-screen flex flex-col'>
       <BrowserRouter basename='/'>
         <Navbar />
-        <div className='flex-grow'>
+        <div className='flex-grow' id='app'>
           <div className='container xl:mx-auto'>
             <div className='fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] -z-10'>
               <img src={logo} alt='logo' className='opacity-[0.08] w-auto xl:w-[800px]' />
