@@ -40,8 +40,9 @@ export const rotationObserver = new IntersectionObserver(
   (entries) => {
     entries
       .filter((e) => e.isIntersecting)
-      .forEach((entry) => {
+      .forEach((entry, index) => {
         if (!(entry.target instanceof HTMLElement) && !(entry.target instanceof SVGElement)) return;
+        if (!entry.target.style.animationDelay) entry.target.style.animationDelay = `${150 * index}ms`;
         entry.target.classList.add(IS_IOS ? 'rotate-logo-forward-ios' : 'rotate-logo-forward');
         rotationObserver.unobserve(entry.target);
       });

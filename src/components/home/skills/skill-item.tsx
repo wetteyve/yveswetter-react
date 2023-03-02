@@ -27,7 +27,7 @@ const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
   };
 
   return (
-    <div className='flex flex-col items-center mr-10 pb-6'>
+    <div className='flex flex-col items-center mr-10 pb-6 max-w-[130px] justify-end'>
       <div>
         <h4 className='pb-2'>{skillTitle}</h4>
       </div>
