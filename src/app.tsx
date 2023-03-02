@@ -18,7 +18,7 @@ function App() {
         <div className='flex-grow'>
           <div className='container xl:mx-auto'>
             <div className='fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] -z-10'>
-              <img src={logo} alt='logo' className='opacity-[0.04] w-auto xl:w-[800px]' />
+              <img src={logo} alt='logo' className='opacity-[0.08] w-auto xl:w-[800px]' />
             </div>
           </div>
           <div className='p-5 pb-0 container mx-auto'>
