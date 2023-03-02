@@ -41,32 +41,28 @@ export const data = {
     {
       title: 'Makethings',
       shortDescription: 'Out of the home workshop, into the Makerspaces',
-      description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      description: 'This content is still under development...',
       devTeamSize: 5,
       thumbnails: [mtLogo],
     },
     {
       title: 'SEE Learning',
       shortDescription: 'Social, Emotional and Ethical learning',
-      description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      description: 'This content is still under development...',
       devTeamSize: 2,
       thumbnails: [seeLogo, emoryLogo],
     },
     {
       title: 'UHT Herisau',
       shortDescription: 'The biggest annual indoor sports event in the canton Appenzell Ausserrhoden, Unihockeyturnier Herisau',
-      description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [uhtLogo],
     },
     {
       title: 'claudiohetzel.ch',
       shortDescription: 'Portfolio of St.Gallen based photographer Claudio Hetzel',
-      description:
-        'Das ist eine Beschreibung. Dieser text sollte durchaus etwas länger werden wenn er definitiv ist. Hier wird das entsprechende Projekt im Detail beschrieben, Features aufgeführt, eventuell seiten Verlinkt, eingesetze Technologien aufgeführt, Videos verlinkt etc, etc....',
+      description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [claudioLogo],
     },
