@@ -24,3 +24,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.disable-scroll {
+  width: 100%;
+  position: fixed;
+}

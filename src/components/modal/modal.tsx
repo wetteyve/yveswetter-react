@@ -15,6 +15,15 @@ const Modal = ({ handleClose, show, children }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
   useIntersectionObserver(modalRef, modalObserver);
 
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add('disable-scroll');
+    }
+    return () => {
+      document.body.classList.remove('disable-scroll');
+    };
+  }, [show]);
+
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
   return (
