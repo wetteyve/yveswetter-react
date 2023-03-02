@@ -86,4 +86,10 @@ export const data = {
       ],
     },
   ],
+  projectsHeading: 'Projects',
+  projectsIntroduction:
+    'Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below.',
+  contactHeading: 'Contact',
+  contactIntroduction:
+    'Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below.',
 };

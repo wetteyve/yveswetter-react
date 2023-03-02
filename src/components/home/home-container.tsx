@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 import fingers from '../../assets/fingers.png';
 import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
 import ScrollBar from '../scrollbar/scrollbar';
+import ContactSection from './contact-section';
+import ProjectsSection from './projects-section';
 import SkillsSection from './skills/skills-section';
 import WelcomeSection from './welcome-section';
 
@@ -60,11 +62,11 @@ const HomeContainer = () => {
       <section ref={skillsRef}>
         <SkillsSection />
       </section>
-      <section ref={projectsRef} className='h-[70vh]'>
-        Projects Ahoi
+      <section ref={projectsRef}>
+        <ProjectsSection />
       </section>
-      <section ref={contactRef} className='h-[30vh]'>
-        Contact me bre
+      <section ref={contactRef}>
+        <ContactSection />
       </section>
       <section className='scrollbar-dot'>
         <img ref={fingersRef} data-origin='bottom' className='mx-auto opacity-0' src={fingers} alt='thumbs-up' />
