@@ -46,7 +46,7 @@ const HomeContainer = () => {
   const description = 'Portfolio for web-projects by Yves Wetter. Here you find some information about the most recent projects.';
 
   return (
-    <div className='z-10 bg-transparent'>
+    <div className='z-10'>
       <Helmet>
         <title>{title}</title>
         <meta name='description' content={description} />

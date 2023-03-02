@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       <p className='r-text-m pb-6'>{data.projectsIntroduction}</p>
       <div
         onClick={() => history.push('/projects')}
-        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[600px] mx-auto shadow-2xl rounded-lg bg-white'
+        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[600px] mx-auto shadow-2xl rounded-lg'
       >
         <Lottie animationData={projectsAnimation} loop={true} className='aspect-square' />
       </div>

@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import contactAnimation from '../../assets/contact-lottie.json';
@@ -17,7 +17,7 @@ const ContactSection = () => {
       <p className='r-text-m pb-6'>{data.contactIntroduction}</p>
       <div
         onClick={() => history.push('/contact')}
-        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[600px] mx-auto shadow-2xl rounded-lg bg-white'
+        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[600px] mx-auto shadow-2xl rounded-lg '
       >
         <Lottie animationData={contactAnimation} loop={true} className='aspect-square' />
       </div>
