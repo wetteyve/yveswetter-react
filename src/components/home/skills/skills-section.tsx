@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
+import { data } from '../../../content/home-data';
 import { fadeInObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 import { Accordion, AccordionItem } from '../../accordion/accordion';
-import { data } from '../data';
 import SkillItem from './skill-item';
 
 const SkillsSection = () => {

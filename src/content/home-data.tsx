@@ -87,9 +87,8 @@ export const data = {
     },
   ],
   projectsHeading: 'Projects',
-  projectsIntroduction:
-    'Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below.',
+  projectsIntroduction: `Check out some of the exciting web projects I've worked on. In the past I was able to contribute to several fullstack projects or implement them completely on my own.`,
   contactHeading: 'Contact',
   contactIntroduction:
-    'Since I have started my computer science journey in 2018 I have gotten into several technologies. Some of them are listed below.',
+    'If you have any questions about me, one of my projects or anything else, you can reach me here via the contact form. I will try to answer your questions as soon as possible. Thanks for stopping by.',
 };

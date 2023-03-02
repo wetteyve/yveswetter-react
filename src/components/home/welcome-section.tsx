@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 
 import yves from '../../assets/yves.webp';
+import { data } from '../../content/home-data';
 import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
-import { data } from './data';
 
 const WelcomeSection = () => {
   const textRef = useRef<HTMLDivElement>(null);

@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
+import { data } from '../../content/home-data';
 import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
-import { data } from './data';
 
 const ContactSection = () => {
   const contactSectionRef = useRef<HTMLDivElement>(null);
