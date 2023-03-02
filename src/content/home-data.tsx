@@ -90,5 +90,5 @@ export const data = {
   projectsIntroduction: `Check out some of the exciting web projects I've worked on. In the past I was able to contribute to several fullstack projects or implement them completely on my own.`,
   contactHeading: 'Contact',
   contactIntroduction:
-    'If you have any questions about me, one of my projects or anything else, you can reach me here via the contact form. I will try to answer your questions as soon as possible. Thanks for stopping by.',
+    'If you have any questions about one of my projects, me or anything else, you can reach me here via the contact form. I will try to answer your questions as soon as possible. Thanks for stopping by.',
 };

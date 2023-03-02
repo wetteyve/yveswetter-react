@@ -17,9 +17,9 @@ const ContactSection = () => {
       <p className='r-text-m pb-6'>{data.contactIntroduction}</p>
       <div
         onClick={() => history.push('/contact')}
-        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[800px] overflow-hidden mx-auto shadow-2xl rounded-lg'
+        className='cursor-pointer transition-all ease-in duration-150 hover:scale-105 max-w-[600px] mx-auto shadow-2xl rounded-lg bg-white'
       >
-        <Lottie animationData={contactAnimation} loop={true} />
+        <Lottie animationData={contactAnimation} loop={true} className='aspect-square' />
       </div>
     </div>
   );
