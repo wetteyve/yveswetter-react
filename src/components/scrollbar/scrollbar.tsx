@@ -61,7 +61,7 @@ const ScrollBar = (props: { dots?: number[]; height: number }) => {
   return (
     <div className='relative hidden md:block'>
       <span className='fixed top-[10vh] 2xl:right-4 right-0 w-12 h-[75vh] bg-transparent'>
-        <span id='scroll-bar' className='relative h-full w-1 block bg-gradient-to-b opacity-60 from-stone-300 to-stone-500 mx-auto'></span>
+        <span id='scroll-bar' className='relative h-full w-1 block bg-gradient-to-b opacity-60 from-stone-300 to-black mx-auto'></span>
         <span
           id='scroll-dot'
           onDrag={(evt) => evt.preventDefault()}
@@ -71,7 +71,7 @@ const ScrollBar = (props: { dots?: number[]; height: number }) => {
               window.removeEventListener('mousemove', trackMouse);
             });
           }}
-          className='!bg-stone-600 absolute cursor-grab mx-auto rotate-45 flex justify-center items-center w-10 p-1 h-10 left-1/2 -translate-x-1/2  -translate-y-1/2 rounded-[50%]'
+          className='!bg-black absolute cursor-grab mx-auto rotate-45 flex justify-center items-center w-4 p-1 h-4 left-1/2 -translate-x-1/2  -translate-y-1/2 rounded-[50%]'
         >
           <span
             ref={sliderRef}
@@ -88,7 +88,7 @@ const ScrollBar = (props: { dots?: number[]; height: number }) => {
               style={{
                 top: `${el}%`,
               }}
-              className={`absolute cursor-pointer w-4 h-4 bg-stone-600 rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2`}
+              className={`absolute cursor-pointer w-4 h-4 bg-[#000000] rounded-full  left-1/2 -translate-x-1/2 -translate-y-1/2`}
             ></span>
           ))}
       </span>
