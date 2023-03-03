@@ -9,7 +9,7 @@ const ProjectsContainer = () => {
   const description = 'Projects developed by Yves Wetter.';
 
   useEffect(() => {
-    window.scrollTo({ behavior: 'auto', top: 0 });
+    window.scrollTo({ behavior: 'smooth', top: 0 });
   }, []);
 
   return (
