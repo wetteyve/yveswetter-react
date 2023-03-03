@@ -10,6 +10,8 @@ export interface IProject {
   thumbnails: string[];
   heading: React.ReactNode;
   technologies: { groupTitle: string; logos: React.ReactNode[] }[];
+  paragraphs: string[];
+  link?: string;
 }
 
 type ProjectItemProps = {

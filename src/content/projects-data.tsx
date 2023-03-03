@@ -76,6 +76,11 @@ export const data = {
           ],
         },
       ],
+      paragraphs: [
+        "Makethings makes Switzerland's creative spaces accessible to everyone. Whoever offers workshops, machines, rooms or workstations can do this completely automated with Makethings.",
+        'Providers can link machines and rooms directly to the bookings of their customers. By simply scanning QR codes, authorized users can open door locks and switch on machines via an MQTT interface. Nuki Smartlocks as well as Shellys can be easily integrated for this purpose.',
+      ],
+      link: 'https://makethings.ch/',
     },
     {
       title: 'SEE Learning',
@@ -116,6 +121,10 @@ export const data = {
           logos: [<SiRailway className={logoClassName} />, <SiDocker className={logoClassName} />],
         },
       ],
+      paragraphs: [
+        'A new corporate website was developed for the SEE Learning project. Furthermore, a platform for the exchange and translation of teaching materials is being created.',
+        'Both projects are currently under development and are not yet live.',
+      ],
     },
     {
       title: 'UHT Herisau',
@@ -150,6 +159,12 @@ export const data = {
           ],
         },
       ],
+      paragraphs: [
+        'The floorball tournament Herisau has been held for over 30 years. The tournament enjoys every year a large number of participants of about 100 teams and continues to grow.',
+        'For a fully automated registration process and the export of participant lists for the purpose of creating a game schedule, a web application was developed.',
+        'In addition, a CMS was installed with Strapi to enable the organizers to manage the content in the best possible way.',
+      ],
+      link: 'https://uht-herisau.ch/',
     },
     {
       title: 'Custom Backend',
@@ -167,6 +182,11 @@ export const data = {
           groupTitle: 'DevOps',
           logos: [<SiRailway className={logoClassName} />],
         },
+      ],
+      paragraphs: [
+        'Some projects do not fundamentally rely on a custom backend, but still need to perform some critical operations detached from the client.',
+        'This NestJS server was designed for such projects. It allows a very fine granular check of calls and provides a clean error handling. The server is especially used for various mailing services and webhooks and will be extended by me if needed.',
+        'Thanks to Railway as a hosting environment, such a custom backend is nowadays very easy to use in a productive environment and causes only moderate costs.',
       ],
     },
     {
@@ -198,6 +218,12 @@ export const data = {
           ],
         },
       ],
+      paragraphs: [
+        'My very first web project which is effectively running in a productive environment to this day.',
+        "With somewhat limited know-how at that time, I created a portfolio website for a good friend. This project opened the doors to the world of SPA's and was the start of my career as a fullstack developer.",
+        'A VueJS frontend pulls content from a Strapi CMS through which the content can be managed in a user-friendly way.',
+      ],
+      link: 'https://makethings.ch/',
     },
   ],
 };

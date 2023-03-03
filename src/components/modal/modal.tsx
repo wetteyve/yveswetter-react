@@ -31,7 +31,7 @@ const Modal = ({ handleClose, show, children }: ModalProps) => {
       <div className='flex justify-center'>
         <section
           ref={modalRef}
-          className='modal-main opacity-0 rounded-lg shadow-xl container h-[calc(100vh-100px)] p-5'
+          className='modal-main opacity-0 rounded-lg shadow-xl container h-[calc(100vh-100px)] p-5 pb-0'
           data-origin='right'
         >
           {children}

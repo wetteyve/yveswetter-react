@@ -39,10 +39,23 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
             </div>
             <div>
               <p className='r-text-m mb-2'>{'About the Project'}</p>
-              <div className='flex items-center md:h-[calc(100%-32px)] h-14'>
-                <span className='r-text-s'>{project.description}</span>
+              <div>
+                {project.paragraphs.map((p, i) => (
+                  <p className='r-text-s pb-3' key={i}>
+                    {p}
+                  </p>
+                ))}
               </div>
             </div>
+            {project.link && (
+              <div className='flex w-full justify-center mb-6'>
+                <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                  <div className='bg-white border-[1px] border-black rounded-full hover:cursor-pointer hover:bg-black hover:text-white transition-all ease-in-out duration-150 pt-2 pb-3 px-4'>
+                    {`Checkout ${project.title}!`}
+                  </div>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
