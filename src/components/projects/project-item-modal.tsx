@@ -37,7 +37,6 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
                 </div>
               </div>
             </div>
-
             <div>
               <p className='r-text-m mb-2'>{'About the Project'}</p>
               <div className='flex items-center md:h-[calc(100%-32px)] h-14'>
