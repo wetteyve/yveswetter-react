@@ -10,6 +10,10 @@ const ProjectsContainer = () => {
 
   useEffect(() => {
     window.scrollTo({ behavior: 'smooth', top: 0 });
+
+    return () => {
+      document.getElementById('app')?.classList.remove('bg-[#00000066]');
+    };
   }, []);
 
   return (

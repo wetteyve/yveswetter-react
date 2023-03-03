@@ -125,6 +125,7 @@ export const data = {
         'A new corporate website was developed for the SEE Learning project. Furthermore, a platform for the exchange and translation of teaching materials is being created.',
         'Both projects are currently under development and are not yet live.',
       ],
+      link: 'https://see-corporate.bettertogether.ag/',
     },
     {
       title: 'UHT Herisau',
@@ -223,7 +224,7 @@ export const data = {
         "With somewhat limited know-how at that time, I created a portfolio website for a good friend. This project opened the doors to the world of SPA's and was the start of my career as a fullstack developer.",
         'A VueJS frontend pulls content from a Strapi CMS through which the content can be managed in a user-friendly way.',
       ],
-      link: 'https://makethings.ch/',
+      link: 'https://claudiohetzel.ch/',
     },
   ],
 };
