@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Modal from '../modal/modal';
 import { IProject } from './project-item';
 
@@ -19,11 +17,11 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
               <h1 className='r-text-xl font-semibold pb-6'>{project.title}</h1>
             </div>
             <div className='w-full aspect-video flex justify-center pb-6'>{project.heading}</div>
-            <div className='flex md:flex-row flex-col md:justify-evenly w-full'>
+            <div className='flex md:flex-row flex-col md:justify-between w-full'>
               {project.technologies.map((g, i) => (
                 <div key={i}>
-                  <p className='r-text-s'>{g.groupTitle}</p>
-                  <div className='flex  flex-wrap'>
+                  <p className='r-text-m'>{g.groupTitle}</p>
+                  <div className='flex flex-wrap'>
                     {g.logos.map((t, ii) => (
                       <div key={ii} className='w-16 overflow-hidden mr-[18px]'>
                         {t}
@@ -32,6 +30,19 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
                   </div>
                 </div>
               ))}
+              <div>
+                <p className='r-text-m'>{'Devteam Size'}</p>
+                <div className='flex items-center md:h-[calc(100%-32px)] h-14'>
+                  <span className='self-center r-text-l font-semibold mr-3'>{project.devTeamSize}</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className='r-text-m mb-2'>{'About the Project'}</p>
+              <div className='flex items-center md:h-[calc(100%-32px)] h-14'>
+                <span className='r-text-s'>{project.description}</span>
+              </div>
             </div>
           </div>
         </div>
