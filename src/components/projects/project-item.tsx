@@ -29,7 +29,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
     <div>
       <div
-        className='bg-[#000000cc] text-white mb-6 w-full h-full rounded-lg p-5 text-center cursor-pointer transition-all ease-in duration-150 md:hover:scale-[1.01] flex flex-col justify-center'
+        className='bg-[#000000cc] text-white mb-6 w-full rounded-lg p-5 text-center cursor-pointer transition-all ease-in duration-150 md:hover:scale-[1.01]'
         onClick={renderModal}
       >
         <div className='flex flex-col items-center'>

@@ -12,7 +12,7 @@ const ProjectsContainer = () => {
   useIntersectionObserver(projectsRef, fadeInObserver);
 
   useEffect(() => {
-    window.scrollTo({ behavior: 'smooth', top: 0 });
+    window.scrollTo({ behavior: 'auto', top: 0 });
   }, []);
 
   return (
@@ -26,13 +26,11 @@ const ProjectsContainer = () => {
         <meta content={description} property='og:description' />
         <meta content='website' property='og:type' />
       </Helmet>
-      {data && (
-        <div ref={projectsRef} data-origin='bottom' className='opacity-0 lg:grid grid-cols-2 gap-5 lg:pb-6'>
-          {data.projects.map((p, i) => (
-            <ProjectItem project={p} key={i} />
-          ))}
-        </div>
-      )}
+      <div ref={projectsRef} data-origin='bottom' className='opacity-0'>
+        {data.projects.map((p, i) => (
+          <ProjectItem project={p} key={i} />
+        ))}
+      </div>
     </div>
   );
 };
