@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react';
 
-import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
 import ProjectItemModal from './project-item-modal';
 
 export interface IProject {
@@ -15,11 +14,8 @@ export interface IProject {
 
 type ProjectItemProps = {
   project: IProject;
-  origin: 'left' | 'right';
 };
-const ProjectItem = ({ project, origin }: ProjectItemProps) => {
-  const projectsRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(projectsRef, fadeInObserver);
+const ProjectItem = ({ project }: ProjectItemProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const hideModal = () => {
@@ -31,7 +27,7 @@ const ProjectItem = ({ project, origin }: ProjectItemProps) => {
     document.getElementById('app')?.classList.add('bg-[#00000066]');
   };
   return (
-    <div ref={projectsRef} className='opacity-0' data-origin={origin}>
+    <div>
       <div
         className='bg-[#000000cc] text-white mb-6 w-full rounded-lg p-5 text-center cursor-pointer transition-all ease-in duration-150 md:hover:scale-[1.01]'
         onClick={renderModal}
