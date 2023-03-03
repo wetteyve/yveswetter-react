@@ -1,17 +1,9 @@
 import { FaCouch } from 'react-icons/fa';
 import {
-  SiBitbucket,
-  SiConfluence,
-  SiCss3,
   SiDocker,
   SiExpress,
-  SiFigma,
-  SiGit,
   SiGithubactions,
-  SiHtml5,
-  SiJava,
   SiJavascript,
-  SiJira,
   SiKubernetes,
   SiMicrosoftazure,
   SiNestjs,
@@ -20,7 +12,7 @@ import {
   SiPostgresql,
   SiRailway,
   SiReact,
-  SiSpring,
+  SiStrapi,
   SiTailwindcss,
   SiTypescript,
   SiVite,
@@ -29,6 +21,7 @@ import {
 } from 'react-icons/si';
 
 import claudioLogo from '../assets/claudio/claudiohetzel.ico';
+import yvesLogoBlack from '../assets/logos/logo_3d_background.svg';
 import mtLogo from '../assets/makethings/MakeThings.webp';
 import emoryLogo from '../assets/see/emory_logo.svg';
 import seeLogo from '../assets/see/see_apple_white.png';
@@ -44,6 +37,45 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 5,
       thumbnails: [mtLogo],
+      heading: (
+        <iframe
+          className='h-full w-full'
+          src='https://www.youtube.com/embed/lrBOpa1sB9w'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowFullScreen
+        ></iframe>
+      ),
+      technologies: [
+        {
+          groupTitle: 'Frontend',
+          logos: [
+            <SiTypescript className={logoClassName} />,
+            <SiReact className={logoClassName} />,
+            <SiVite className={logoClassName} />,
+            <SiTailwindcss className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'Backend',
+          logos: [
+            <SiNodedotjs className={logoClassName} />,
+            <SiExpress className={logoClassName} />,
+            <FaCouch className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [
+            <SiGithubactions className={logoClassName} />,
+            <SiRailway className={logoClassName} />,
+            <SiMicrosoftazure className={logoClassName} />,
+            <SiKubernetes className={logoClassName} />,
+            <SiDocker className={logoClassName} />,
+          ],
+        },
+      ],
     },
     {
       title: 'SEE Learning',
@@ -51,6 +83,39 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 2,
       thumbnails: [seeLogo, emoryLogo],
+      heading: (
+        <iframe
+          className='h-full w-full'
+          src='https://www.youtube.com/embed/7YK6jVGLpwE'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowFullScreen
+        ></iframe>
+      ),
+      technologies: [
+        {
+          groupTitle: 'Frontend',
+          logos: [
+            <SiTypescript className={logoClassName} />,
+            <SiNextdotjs className={logoClassName} />,
+            <SiTailwindcss className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'Backend',
+          logos: [
+            <SiNodedotjs className={logoClassName} />,
+            <SiStrapi className={logoClassName} />,
+            <SiNestjs className={logoClassName} />,
+            <SiPostgresql className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [<SiRailway className={logoClassName} />, <SiDocker className={logoClassName} />],
+        },
+      ],
     },
     {
       title: 'UHT Herisau',
@@ -58,6 +123,33 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [uhtLogo],
+      heading: <img src={uhtLogo} alt={`logo_uht_herisau`} className='rounded pb-4 h-full' />,
+      technologies: [
+        {
+          groupTitle: 'Frontend',
+          logos: [
+            <SiTypescript className={logoClassName} />,
+            <SiReact className={logoClassName} />,
+            <SiWebpack className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'Backend',
+          logos: [
+            <SiNodedotjs className={logoClassName} />,
+            <SiStrapi className={logoClassName} />,
+            <SiExpress className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [
+            <SiMicrosoftazure className={logoClassName} />,
+            <SiKubernetes className={logoClassName} />,
+            <SiDocker className={logoClassName} />,
+          ],
+        },
+      ],
     },
     {
       title: 'claudiohetzel.ch',
@@ -65,54 +157,46 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [claudioLogo],
-    },
-  ],
-  skills: [
-    {
-      title: 'Frontend',
-      items: [
-        { title: 'Typescript', logo: <SiTypescript className={logoClassName} /> },
-        { title: 'Javascript', logo: <SiJavascript className={logoClassName} /> },
-        { title: 'Next.js', logo: <SiNextdotjs className={logoClassName} /> },
-        { title: 'React', logo: <SiReact className={logoClassName} /> },
-        { title: 'Vue', logo: <SiVuedotjs className={logoClassName} /> },
-        { title: 'Vite', logo: <SiVite className={logoClassName} /> },
-        { title: 'Webpack', logo: <SiWebpack className={logoClassName} /> },
-        { title: 'Tailwind', logo: <SiTailwindcss className={logoClassName} /> },
-        { title: 'CSS', logo: <SiCss3 className={logoClassName} /> },
-        { title: 'HTML5', logo: <SiHtml5 className={logoClassName} /> },
+      heading: <img src={claudioLogo} alt={`logo_claudio`} className='rounded pb-4 h-full' />,
+      technologies: [
+        {
+          groupTitle: 'Frontend',
+          logos: [
+            <SiJavascript className={logoClassName} />,
+            <SiVuedotjs className={logoClassName} />,
+            <SiWebpack className={logoClassName} />,
+          ],
+        },
+        {
+          groupTitle: 'Backend',
+          logos: [<SiNodedotjs className={logoClassName} />, <SiNestjs className={logoClassName} />],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [
+            <SiMicrosoftazure className={logoClassName} />,
+            <SiKubernetes className={logoClassName} />,
+            <SiDocker className={logoClassName} />,
+          ],
+        },
       ],
     },
     {
-      title: 'Backend',
-      items: [
-        { title: 'NodeJS', logo: <SiNodedotjs className={logoClassName} /> },
-        { title: 'NestJS', logo: <SiNestjs className={logoClassName} /> },
-        { title: 'Express', logo: <SiExpress className={logoClassName} /> },
-        { title: 'Java', logo: <SiJava className={logoClassName} /> },
-        { title: 'Spring', logo: <SiSpring className={logoClassName} /> },
-        { title: 'PostgreSQL', logo: <SiPostgresql className={logoClassName} /> },
-        { title: 'CouchDB', logo: <FaCouch className={logoClassName} /> },
-      ],
-    },
-    {
-      title: 'DevOps',
-      items: [
-        { title: 'GithubActions', logo: <SiGithubactions className={logoClassName} /> },
-        { title: 'Bitbucket Pipelines', logo: <SiBitbucket className={logoClassName} /> },
-        { title: 'Railway.app', logo: <SiRailway className={logoClassName} /> },
-        { title: 'Azure', logo: <SiMicrosoftazure className={logoClassName} /> },
-        { title: 'Kubernetes', logo: <SiKubernetes className={logoClassName} /> },
-        { title: 'Docker', logo: <SiDocker className={logoClassName} /> },
-      ],
-    },
-    {
-      title: 'Tools',
-      items: [
-        { title: 'Git', logo: <SiGit className={logoClassName} /> },
-        { title: 'Jira', logo: <SiJira className={logoClassName} /> },
-        { title: 'Confluence', logo: <SiConfluence className={logoClassName} /> },
-        { title: 'Figma', logo: <SiFigma className={logoClassName} /> },
+      title: 'Custom Backend',
+      shortDescription: 'A NestJS server for backend tasks of various private projects',
+      description: 'This content is still under development...',
+      devTeamSize: 1,
+      thumbnails: [yvesLogoBlack],
+      heading: <img src={yvesLogoBlack} alt={`logo_yves`} className='rounded pb-4 h-full' />,
+      technologies: [
+        {
+          groupTitle: 'Backend',
+          logos: [<SiNodedotjs className={logoClassName} />, <SiStrapi className={logoClassName} />],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [<SiRailway className={logoClassName} />],
+        },
       ],
     },
   ],

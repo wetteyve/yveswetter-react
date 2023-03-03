@@ -1,13 +1,15 @@
 import { useRef, useState } from 'react';
 
-import Modal from '../modal/modal';
+import ProjectItemModal from './project-item-modal';
 
-interface IProject {
+export interface IProject {
   title: string;
   description: string;
   shortDescription: string;
   devTeamSize: number;
   thumbnails: string[];
+  heading: React.ReactNode;
+  technologies: { groupTitle: string; logos: React.ReactNode[] }[];
 }
 
 type ProjectItemProps = {
@@ -40,17 +42,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         <p className='r-text-m pb-3'>{project.shortDescription}</p>
         <h1 className='r-text-xl font-semibold'>{project.title}</h1>
       </div>
-
-      <Modal show={showModal} handleClose={hideModal}>
-        <div className='relative h-full'>
-          <div className='max-h-full overflow-auto scrollable'>
-            <div className='h-[1500px]'>
-              <h1 className='r-text-xl font-semibold pb-6'>{project.title}</h1>
-              <p className='r-text-m pb-6'>{project.description}</p>
-            </div>
-          </div>
-        </div>
-      </Modal>
+      <ProjectItemModal project={project} showModal={showModal} hideModal={hideModal} />
     </div>
   );
 };

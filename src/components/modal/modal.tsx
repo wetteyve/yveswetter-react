@@ -35,7 +35,7 @@ const Modal = ({ handleClose, show, children }: ModalProps) => {
           data-origin='right'
         >
           {children}
-          <button className={`fixed top-3 right-3 rounded-full p-1 text-white bg-black`} onClick={handleClose}>
+          <button className={`fixed top-5 right-5 rounded-full p-1 text-white bg-black`} onClick={handleClose}>
             <TbX size={16} />
           </button>
         </section>
