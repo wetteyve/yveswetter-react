@@ -152,6 +152,24 @@ export const data = {
       ],
     },
     {
+      title: 'Custom Backend',
+      shortDescription: 'A NestJS server for backend tasks of various private projects',
+      description: 'This content is still under development...',
+      devTeamSize: 1,
+      thumbnails: [yvesLogoBlack],
+      heading: <img src={yvesLogoBlack} alt={`logo_yves`} className='rounded pb-4 h-full' />,
+      technologies: [
+        {
+          groupTitle: 'Backend',
+          logos: [<SiNodedotjs className={logoClassName} />, <SiStrapi className={logoClassName} />],
+        },
+        {
+          groupTitle: 'DevOps',
+          logos: [<SiRailway className={logoClassName} />],
+        },
+      ],
+    },
+    {
       title: 'claudiohetzel.ch',
       shortDescription: 'Portfolio of St.Gallen based photographer Claudio Hetzel',
       description: 'This content is still under development...',
@@ -178,24 +196,6 @@ export const data = {
             <SiKubernetes className={logoClassName} />,
             <SiDocker className={logoClassName} />,
           ],
-        },
-      ],
-    },
-    {
-      title: 'Custom Backend',
-      shortDescription: 'A NestJS server for backend tasks of various private projects',
-      description: 'This content is still under development...',
-      devTeamSize: 1,
-      thumbnails: [yvesLogoBlack],
-      heading: <img src={yvesLogoBlack} alt={`logo_yves`} className='rounded pb-4 h-full' />,
-      technologies: [
-        {
-          groupTitle: 'Backend',
-          logos: [<SiNodedotjs className={logoClassName} />, <SiStrapi className={logoClassName} />],
-        },
-        {
-          groupTitle: 'DevOps',
-          logos: [<SiRailway className={logoClassName} />],
         },
       ],
     },
