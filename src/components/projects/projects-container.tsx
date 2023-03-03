@@ -2,14 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { data } from '../../content/projects-data';
-import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
 import ProjectItem from './project-item';
 
 const ProjectsContainer = () => {
   const title = 'Projects | Yves Wetter';
   const description = 'Projects developed by Yves Wetter.';
-  const projectsRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(projectsRef, fadeInObserver);
 
   useEffect(() => {
     window.scrollTo({ behavior: 'auto', top: 0 });
@@ -26,9 +23,9 @@ const ProjectsContainer = () => {
         <meta content={description} property='og:description' />
         <meta content='website' property='og:type' />
       </Helmet>
-      <div ref={projectsRef} data-origin='bottom' className='opacity-0'>
+      <div>
         {data.projects.map((p, i) => (
-          <ProjectItem project={p} key={i} />
+          <ProjectItem project={p} key={i} origin={i % 2 === 0 ? 'left' : 'right'} />
         ))}
       </div>
     </div>
