@@ -21,17 +21,25 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const hideModal = () => {
     document.getElementById('app')?.classList.remove('bg-[#00000066]');
+    document.querySelectorAll('.hide-on-modal-open').forEach((e) => {
+      e.classList.add('opacity-100');
+    });
     setShowModal(false);
   };
   const renderModal = () => {
     setShowModal(true);
     document.getElementById('app')?.classList.add('bg-[#00000066]');
+    document.querySelectorAll('.hide-on-modal-open').forEach((e) => {
+      e.classList.add('opacity-0');
+      e.classList.remove('opacity-100');
+    });
   };
   return (
     <div>
       <div
         onClick={renderModal}
-        className='bg-[#000000cc] text-white mb-6 w-full rounded-lg p-5 text-center cursor-pointer transition-all ease-in duration-150 md:hover:scale-[1.01]'
+        className={`flex flex-col justify-center bg-[#000000cc] text-white w-full h-full rounded-lg p-5 
+                    text-center cursor-pointer transition-all ease-in duration-150 md:hover:scale-[1.01] hide-on-modal-open`}
       >
         <div className='flex flex-col items-center'>
           {project.thumbnails.map((t, i) => (

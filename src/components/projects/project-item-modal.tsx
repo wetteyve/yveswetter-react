@@ -16,7 +16,9 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
             <div className='w-full flex justify-center'>
               <h1 className='r-text-xl font-semibold pb-6'>{project.title}</h1>
             </div>
+
             <div className='w-full aspect-video flex justify-center pb-6'>{project.heading}</div>
+
             <div className='flex md:flex-row flex-col md:justify-between w-full'>
               {project.technologies.map((g, i) => (
                 <div key={i}>
@@ -37,9 +39,10 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
                 </div>
               </div>
             </div>
+
             <div>
               <p className='r-text-m mb-2'>{'About the Project'}</p>
-              <div>
+              <div className='max-w-4xl'>
                 {project.paragraphs.map((p, i) => (
                   <p className='r-text-s pb-3' key={i}>
                     {p}
@@ -47,6 +50,7 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
                 ))}
               </div>
             </div>
+
             {project.link && (
               <div className='flex w-full justify-center mb-6 mt-3'>
                 <a href={project.link} target='_blank' rel='noopener noreferrer'>

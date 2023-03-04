@@ -9,7 +9,8 @@ const ProjectsContainer = () => {
   const description = 'Projects developed by Yves Wetter.';
 
   useEffect(() => {
-    window.scrollTo({ behavior: 'smooth', top: 0 });
+    window.scrollTo({ behavior: 'auto', top: 0 });
+    document.getElementById('projects-container')?.classList.add('fadeInFromBottom');
 
     return () => {
       document.getElementById('app')?.classList.remove('bg-[#00000066]');
@@ -17,7 +18,7 @@ const ProjectsContainer = () => {
   }, []);
 
   return (
-    <div>
+    <div className='opacity-0' id='projects-container'>
       <Helmet>
         <title>{title}</title>
         <meta name='description' content={description} />
@@ -27,7 +28,7 @@ const ProjectsContainer = () => {
         <meta content={description} property='og:description' />
         <meta content='website' property='og:type' />
       </Helmet>
-      <div>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6'>
         {data.projects.map((p, i) => (
           <ProjectItem project={p} key={i} />
         ))}
