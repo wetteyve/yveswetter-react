@@ -208,7 +208,11 @@ export const data = {
         },
         {
           groupTitle: 'Backend',
-          logos: [<SiNodedotjs className={logoClassName} />, <SiNestjs className={logoClassName} />],
+          logos: [
+            <SiNodedotjs className={logoClassName} />,
+            <SiStrapi className={logoClassName} />,
+            <SiNestjs className={logoClassName} />,
+          ],
         },
         {
           groupTitle: 'DevOps',

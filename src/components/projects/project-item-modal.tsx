@@ -48,7 +48,7 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
               </div>
             </div>
             {project.link && (
-              <div className='flex w-full justify-center mb-6'>
+              <div className='flex w-full justify-center mb-6 mt-3'>
                 <a href={project.link} target='_blank' rel='noopener noreferrer'>
                   <div className='bg-white border-[1px] border-black rounded-full hover:cursor-pointer hover:bg-black hover:text-white transition-all ease-in-out duration-150 pt-2 pb-3 px-4'>
                     {`Checkout ${project.title}!`}
