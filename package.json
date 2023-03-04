@@ -5,8 +5,9 @@
   "scripts": {
     "start": "npx http-server ./dist",
     "dev": "vite --host",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "yarn generate-sitemap && tsc && vite build",
+    "preview": "vite preview",
+    "generate-sitemap": "babel-node ./sitemap-generator/sitemap-generator.ts"
   },
   "dependencies": {
     "@types/react-helmet": "^6.1.6",
@@ -19,7 +20,12 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/babel__preset-env": "^7.9.2",
+    "@types/node": "^18.14.6",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.3.3",
@@ -28,6 +34,7 @@
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "prefixer": "^0.0.3",
+    "react-router-sitemap": "^1.2.0",
     "tailwindcss": "^3.2.7",
     "typescript": "^4.6.3",
     "vite": "^2.9.9"
