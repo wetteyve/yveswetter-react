@@ -10,13 +10,15 @@ const ImpressumContainer = () => {
 
   const title = 'Impressum | Yves Wetter';
   const description = 'Impressum yveswetter.ch';
+  const keywords =
+    'yves, wetter, yveswetter, web, fullstack, software, development, engineer, website, webseite, nextjs, react, frontend, backend, devops, portfolio, projects, contact, message, mail, schweiz, switzerland, ch';
 
   return (
     <div>
       <Helmet>
         <title>{title}</title>
         <meta name='description' content={description} />
-        <meta name='keywords' content='MakeThings, Makerspace, Kurs, Maschine, Arbeitsplatz, Freiraum, Space, Eventlocation' />
+        <meta name='keywords' content={keywords} />
         <meta content={title} property='og:title' />
         <meta content={window.location.href} property='og:url' />
         <meta content={description} property='og:description' />
