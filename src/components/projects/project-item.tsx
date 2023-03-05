@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 
 import ProjectItemModal from './project-item-modal';
@@ -44,7 +45,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
         <div className='flex flex-col items-center'>
           {project.thumbnails.map((t, i) => (
             <div key={i} className='max-w-[600px]'>
-              <img src={t} alt={`logo_${project.title}`} className='rounded pb-4' key={i} />
+              <Image src={t} alt={`logo_${project.title}`} className='rounded pb-4' key={i} />
             </div>
           ))}
         </div>

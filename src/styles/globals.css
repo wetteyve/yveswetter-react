@@ -1,15 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('./theme/text.css');
 @import url('./theme/animations.css');
+@import url('./theme/animate-3d.css');
+@import url('./theme/modal.css');
 
 @font-face {
   font-family: 'Basier-Circle-Mono-Regular';
-  src: url('./assets/fonts/basiercirclemono-regular-webfont.ttf');
+  src: url('./fonts/basiercirclemono-regular-webfont.ttf');
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Basier-Circle-Mono--Semibold';
-  src: url('./assets/fonts/basiercirclemono-semibold-webfont.ttf');
+  src: url('./fonts/basiercirclemono-semibold-webfont.ttf');
   font-display: swap;
 }
 

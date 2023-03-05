@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 type MobileNavbarItemProps = {
   href: string;
@@ -9,17 +9,14 @@ type MobileNavbarItemProps = {
 
 const MobileNavbarItem = (props: MobileNavbarItemProps) => {
   //todo pathname über hook holen
-  const pathName = "";
+  const pathName = '';
 
   return (
     <Link
       className={`w-full whitespace-nowrap px-4 py-4 text-center text-lg text-white ${
-        pathName === props.href ||
-        (pathName && props.alternatives?.includes(pathName))
-          ? "text-accent"
-          : ""
+        pathName === props.href || (pathName && props.alternatives?.includes(pathName)) ? 'text-accent' : ''
       }`}
-      to={props.href}
+      href={props.href}
       onClick={props.onClick}
     >
       {props.text}

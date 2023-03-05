@@ -42,7 +42,7 @@ const ProjectItemModal = ({ project, showModal, hideModal }: ProjectItemModalPro
 
             <div>
               <p className='r-text-m mb-2'>{'About the Project'}</p>
-              <div className='max-w-4xl'>
+              <div>
                 {project.paragraphs.map((p, i) => (
                   <p className='r-text-s pb-3' key={i}>
                     {p}

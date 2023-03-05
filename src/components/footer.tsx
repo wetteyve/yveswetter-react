@@ -1,10 +1,8 @@
+import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { useHistory } from 'react-router-dom';
 
 const Footer = () => {
-  const history = useHistory();
-
   const linkedin_url = 'https://linkedin.com/in/yves-wetter-9a4444170';
   const github_url = 'https://github.com/wetteyve';
 
@@ -21,9 +19,9 @@ const Footer = () => {
         </div>
         <div className='flex justify-center pt-4'>
           <span className='r-text-s'>{`${new Date().getFullYear()} - Yves Wetter -`}</span>
-          <span className='r-text-s hover:cursor-pointer whitespace-pre' onClick={() => history.push('/impressum')}>
-            {' Impressum'}
-          </span>
+          <Link href={'/impressum'}>
+            <span className='r-text-s hover:cursor-pointer whitespace-pre'>{' Impressum'}</span>
+          </Link>
         </div>
       </div>
     </div>

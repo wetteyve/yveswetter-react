@@ -1,30 +1,33 @@
-import { useRef } from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
+import { useEffect, useRef, useState } from 'react';
 
-import data from '../../content/impressum-data.json';
-import { fadeInObserver, useIntersectionObserver } from '../../utils/intersection-observer';
+import data from '../content/impressum-data.json';
 
 const ImpressumContainer = () => {
   const impressumRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(impressumRef, fadeInObserver);
 
   const title = 'Impressum | Yves Wetter';
   const description = 'Impressum yveswetter.ch';
   const keywords =
     'yves, wetter, yveswetter, web, fullstack, software, development, engineer, website, webseite, nextjs, react, frontend, backend, devops, portfolio, projects, contact, message, mail, schweiz, switzerland, ch';
+  const [location, setLocation] = useState<string>();
+
+  useEffect(() => {
+    setLocation(window.location.href);
+  }, []);
 
   return (
     <div>
-      <Helmet>
+      <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
         <meta content={title} property='og:title' />
-        <meta content={window.location.href} property='og:url' />
+        {location && <meta content={location} property='og:url' />}
         <meta content={description} property='og:description' />
         <meta content='website' property='og:type' />
-      </Helmet>
-      <div ref={impressumRef} data-origin='bottom' className='opacity-0'>
+      </Head>
+      <div ref={impressumRef} className='fadeInFromBottom'>
         <h1 className='r-text-xl font-semibold pb-6'>{data.title}</h1>
         <div className='grid grid-cols-2'>
           <span>{'Name'}</span>

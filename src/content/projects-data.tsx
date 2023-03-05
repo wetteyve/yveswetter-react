@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FaCouch } from 'react-icons/fa';
 import {
   SiDocker,
@@ -133,7 +134,7 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [uhtLogo],
-      heading: <img src={uhtLogo} alt={`logo_uht_herisau`} className='rounded pb-4 h-full' />,
+      heading: <Image src={uhtLogo} alt={`logo_uht_herisau`} className='rounded pb-4 h-full w-auto' />,
       technologies: [
         {
           groupTitle: 'Frontend',
@@ -173,7 +174,7 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [yvesLogoBlack],
-      heading: <img src={yvesLogoBlack} alt={`logo_yves`} className='rounded pb-4 h-full' />,
+      heading: <Image src={yvesLogoBlack} alt={`logo_yves`} className='rounded pb-4 h-full' />,
       technologies: [
         {
           groupTitle: 'Backend',
@@ -196,7 +197,7 @@ export const data = {
       description: 'This content is still under development...',
       devTeamSize: 1,
       thumbnails: [claudioLogo],
-      heading: <img src={claudioLogo} alt={`logo_claudio`} className='rounded pb-4 h-full' />,
+      heading: <Image src={claudioLogo} alt={`logo_claudio`} className='rounded pb-4 h-full w-auto' />,
       technologies: [
         {
           groupTitle: 'Frontend',

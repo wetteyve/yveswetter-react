@@ -10,7 +10,6 @@
 .modal-main {
   position: fixed;
   background: white;
-  transform: translate(calc(-50%));
 }
 
 .display-block {

@@ -1,13 +1,34 @@
-import { useRef } from 'react';
+import { IS_IOS } from '@/utils/detect-ios';
+import { useEffect, useRef, useState } from 'react';
 
 import { data } from '../../../content/home-data';
-import { fadeInObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 import { Accordion, AccordionItem } from '../../accordion/accordion';
 import SkillItem from './skill-item';
 
 const SkillsSection = () => {
   const skillsSection = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(skillsSection, fadeInObserver);
+  const [rotationObserver, setRotationObserver] = useState<IntersectionObserver>();
+
+  //setup intersection observer
+  useEffect(() => {
+    setRotationObserver(
+      new IntersectionObserver(
+        (entries) => {
+          entries
+            .filter((e) => e.isIntersecting)
+            .forEach((entry, index) => {
+              if (!(entry.target instanceof HTMLElement) && !(entry.target instanceof SVGElement)) return;
+              if (!entry.target.style.animationDelay) entry.target.style.animationDelay = `${150 * index}ms`;
+              entry.target.classList.add(IS_IOS(window.navigator) ? 'rotate-logo-forward-ios' : 'rotate-logo-forward');
+              rotationObserver?.unobserve(entry.target);
+            });
+        },
+        {
+          threshold: 0.3,
+        }
+      )
+    );
+  }, []);
 
   const items =
     data.skills.map((s: any) => {
@@ -16,7 +37,12 @@ const SkillsSection = () => {
         content: (
           <div className='flex flex-wrap justify-evenly md:justify-start'>
             {s.items.map((e: any, i: number) => (
-              <SkillItem key={`${i}-${s.title}`} skillTitle={e.title} skillLogo={e.logo} />
+              <SkillItem
+                key={`${i}-${s.title}`}
+                skillTitle={e.title}
+                skillLogo={e.logo}
+                rotationObserver={rotationObserver as IntersectionObserver}
+              />
             ))}
           </div>
         ),
@@ -24,12 +50,10 @@ const SkillsSection = () => {
     }) || [];
 
   return (
-    <div ref={skillsSection} data-origin='bottom' className='pb-12 opacity-0'>
+    <div ref={skillsSection} data-origin='bottom' className='pb-12  '>
       <h1 className='r-text-xl font-semibold pb-6'>{data.skillsHeading}</h1>
       <p className='r-text-m pb-6'>{data.skillsIntroduction}</p>
-      <div className='pb-6'>
-        <Accordion items={items} />
-      </div>
+      <div className='pb-6'>{rotationObserver && <Accordion items={items} />}</div>
     </div>
   );
 };

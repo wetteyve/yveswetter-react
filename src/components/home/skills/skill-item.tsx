@@ -1,28 +1,31 @@
-import './animate-3d.css';
-
-import { BaseSyntheticEvent, useRef } from 'react';
+import { BaseSyntheticEvent, useEffect, useRef, useState } from 'react';
 
 import { IS_IOS } from '../../../utils/detect-ios';
-import { rotationObserver, useIntersectionObserver } from '../../../utils/intersection-observer';
 
 type SkillItemProps = {
   skillTitle: string;
-  skillLogo?: React.ReactNode;
+  skillLogo: React.ReactNode;
+  rotationObserver: IntersectionObserver;
 };
 
-const SkillItem = ({ skillTitle, skillLogo }: SkillItemProps) => {
+const SkillItem = ({ skillTitle, skillLogo, rotationObserver }: SkillItemProps) => {
   const logoRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(logoRef, rotationObserver);
+
+  //observe logos
+  useEffect(() => {
+    if (logoRef.current) rotationObserver?.observe(logoRef.current);
+  }, [rotationObserver]);
 
   const rotate = (e: BaseSyntheticEvent) => {
     e.preventDefault();
     const element = document.getElementById(skillTitle);
-    if (element?.classList.contains(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios')) {
-      element?.classList.remove(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
-      element?.classList.add(!IS_IOS ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
+    element?.classList.add('instant-animation');
+    if (element?.classList.contains(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios')) {
+      element?.classList.remove(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
+      element?.classList.add(!IS_IOS(window.navigator) ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
     } else {
-      element?.classList.remove(!IS_IOS ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
-      element?.classList.add(!IS_IOS ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
+      element?.classList.remove(!IS_IOS(window.navigator) ? 'rotate-logo-backward' : 'rotate-logo-backward-ios');
+      element?.classList.add(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
     }
   };
 

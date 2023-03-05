@@ -1,9 +1,5 @@
-import './modal.css';
-
 import React, { useEffect, useRef } from 'react';
 import { TbX } from 'react-icons/tb';
-
-import { modalObserver, useIntersectionObserver } from '../../utils/intersection-observer';
 
 type ModalProps = {
   handleClose: () => void;
@@ -13,7 +9,6 @@ type ModalProps = {
 
 const Modal = ({ handleClose, show, children }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  useIntersectionObserver(modalRef, modalObserver);
 
   useEffect(() => {
     if (show) {
@@ -27,13 +22,9 @@ const Modal = ({ handleClose, show, children }: ModalProps) => {
   const showHideClassName = show ? 'modal display-block' : 'modal display-none';
 
   return (
-    <div className={`${showHideClassName}`} id='main-frame'>
+    <div className={`${showHideClassName} fadeInFromRight`} id='main-frame'>
       <div className='flex justify-center'>
-        <section
-          ref={modalRef}
-          className='modal-main opacity-0 rounded-lg container h-[calc(100vh-120px)] max-w-5xl p-5 pb-0'
-          data-origin='right'
-        >
+        <section ref={modalRef} className='modal-main rounded-lg container h-[calc(100vh-120px)] p-5 pb-0' data-origin='right'>
           {children}
           <button className={`fixed top-5 right-5 rounded-full p-1 text-white bg-black`} onClick={handleClose}>
             <TbX size={16} />

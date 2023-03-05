@@ -1,4 +1,4 @@
-import { FaCouch } from 'react-icons/fa';
+import { FaCouch, FaJava } from 'react-icons/fa';
 import {
   SiBitbucket,
   SiConfluence,
@@ -9,7 +9,6 @@ import {
   SiGit,
   SiGithubactions,
   SiHtml5,
-  SiJava,
   SiJavascript,
   SiJira,
   SiKubernetes,
@@ -59,7 +58,7 @@ export const data = {
         { title: 'NodeJS', logo: <SiNodedotjs className={logoClassName} /> },
         { title: 'NestJS', logo: <SiNestjs className={logoClassName} /> },
         { title: 'Express', logo: <SiExpress className={logoClassName} /> },
-        { title: 'Java', logo: <SiJava className={logoClassName} /> },
+        { title: 'Java', logo: <FaJava className={logoClassName} /> },
         { title: 'Spring', logo: <SiSpring className={logoClassName} /> },
         { title: 'PostgreSQL', logo: <SiPostgresql className={logoClassName} /> },
         { title: 'CouchDB', logo: <FaCouch className={logoClassName} /> },

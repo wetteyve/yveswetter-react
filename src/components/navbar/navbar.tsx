@@ -1,5 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import logo_klein from '../../assets/logos/logo_klein.svg';
 import MobileNavbar from './mobile-navbar';
@@ -11,7 +12,6 @@ export type NavbarItemType = {
 };
 
 const Navbar = () => {
-  const history = useHistory();
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -60,13 +60,15 @@ const Navbar = () => {
     <div className={`shadow-lg bg-white z-20 sticky ${visible && 'top-0 motion-safe:animate-fadeIn'}`}>
       <div className='container mx-auto h-[80px] p-5 flex justify-between'>
         <div className='flex'>
-          <img src={logo_klein} alt='logo' className='w-10 mr-5 hover:cursor-pointer' onClick={() => history.push('/')} />
+          <Link href={'/'} className='w-10 mr-5 hover:cursor-pointer'>
+            <Image src={logo_klein} alt='logo' />
+          </Link>
         </div>
         <div className='md:flex hidden'>
           {navbarItemsDesktop.map((e, i) => (
-            <div key={i} className='my-auto ml-12 hover:cursor-pointer' onClick={() => history.push(e.href)}>
+            <Link key={i} className='my-auto ml-12 hover:cursor-pointer' href={e.href}>
               <p className='r-text-m font-semibold transition-all ease-in duration-150 hover:scale-105'>{e.text}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className='block md:hidden my-auto'>
