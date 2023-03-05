@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const ScrollBar = (props: { dots?: number[]; height: number }) => {
   const sliderRef = useRef<HTMLSpanElement>(null);

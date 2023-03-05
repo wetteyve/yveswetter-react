@@ -58,22 +58,28 @@ const HomeContainer = () => {
         <meta content={description} property='og:description' />
         <meta content='website' property='og:type' />
       </Helmet>
-      <section ref={welcomeRef}>
-        <WelcomeSection />
+      <section className='fadeInFromBottom'>
+        <section ref={welcomeRef}>
+          <WelcomeSection />
+        </section>
+        <section ref={skillsRef}>
+          <SkillsSection />
+        </section>
+        <section ref={projectsRef}>
+          <ProjectsSection />
+        </section>
+        <section ref={contactRef}>
+          <ContactSection />
+        </section>
+        <section>
+          <img ref={fingersRef} data-origin='bottom' className='mx-auto opacity-0' src={fingers} alt='thumbs-up' />
+        </section>
       </section>
-      <section ref={skillsRef}>
-        <SkillsSection />
-      </section>
-      <section ref={projectsRef}>
-        <ProjectsSection />
-      </section>
-      <section ref={contactRef}>
-        <ContactSection />
-      </section>
-      <section className='scrollbar-dot'>
-        <img ref={fingersRef} data-origin='bottom' className='mx-auto opacity-0' src={fingers} alt='thumbs-up' />
-      </section>
-      {bodyHeight && <ScrollBar dots={dots} height={bodyHeight} />}
+      {bodyHeight && (
+        <section>
+          <ScrollBar dots={dots} height={bodyHeight} />
+        </section>
+      )}
     </div>
   );
 };
