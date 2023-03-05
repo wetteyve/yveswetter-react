@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
   const linkedin_url = 'https://linkedin.com/in/yves-wetter-9a4444170';
-  const github_url = 'https://github.com/wetteyve';
+  const github_url = 'https://github.com/sparxz12';
 
   return (
     <div className='border-t-[1px] bg-white z-10'>
