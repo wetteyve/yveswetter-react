@@ -19,6 +19,7 @@ const SkillItem = ({ skillTitle, skillLogo, rotationObserver }: SkillItemProps) 
   const rotate = (e: BaseSyntheticEvent) => {
     e.preventDefault();
     const element = document.getElementById(skillTitle);
+    console.log(element);
     element?.classList.add('instant-animation');
     if (element?.classList.contains(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios')) {
       element?.classList.remove(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
@@ -34,7 +35,7 @@ const SkillItem = ({ skillTitle, skillLogo, rotationObserver }: SkillItemProps) 
       <div>
         <h4 className='pb-2'>{skillTitle}</h4>
       </div>
-      <div ref={logoRef} id={skillTitle} className='h-max' onClick={(e) => rotate(e)}>
+      <div ref={logoRef} id={skillTitle} className='h-max cursor-pointer' onClick={(e) => rotate(e)}>
         {skillLogo}
       </div>
     </div>
