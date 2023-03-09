@@ -19,7 +19,6 @@ const SkillItem = ({ skillTitle, skillLogo, rotationObserver }: SkillItemProps) 
   const rotate = (e: BaseSyntheticEvent) => {
     e.preventDefault();
     const element = document.getElementById(skillTitle);
-    console.log(element);
     element?.classList.add('instant-animation');
     if (element?.classList.contains(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios')) {
       element?.classList.remove(!IS_IOS(window.navigator) ? 'rotate-logo-forward' : 'rotate-logo-forward-ios');
