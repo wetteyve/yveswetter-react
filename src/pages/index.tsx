@@ -11,7 +11,7 @@ import fingers from '../assets/fingers.png';
 
 const HomeContainer = () => {
   const title = 'Home | Yves Wetter';
-  const description = 'Portfolio for web-projects by Yves Wetter. Here you find some information about the most recent projects.';
+  const description = 'Portfolio website of Swiss based fullstack web developer Yves Wetter.';
   const keywords =
     'yves, wetter, yveswetter, web, fullstack, software, development, engineer, website, webseite, nextjs, react, frontend, backend, devops, portfolio, projects, contact, message, mail, schweiz, switzerland, ch';
   const [location, setLocation] = useState<string>();
